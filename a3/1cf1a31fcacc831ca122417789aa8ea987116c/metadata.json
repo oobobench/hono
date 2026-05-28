@@ -1,0 +1,162 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "a31cf1a31fcacc831ca122417789aa8ea987116c",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008621,
+  "message": "fix(accept): replace regex split to mitigate ReDoS (#4758)",
+  "files_changed": [
+    "benchmarks/handle-event/index.js",
+    "bun.lock",
+    "eslint.config.mjs",
+    "package.json",
+    "runtime-tests/lambda/mock.ts",
+    "runtime-tests/lambda/stream-mock.ts",
+    "src/adapter/aws-lambda/handler.ts",
+    "src/adapter/cloudflare-pages/handler.test.ts",
+    "src/client/utils.test.ts",
+    "src/helper/dev/index.test.ts",
+    "src/helper/ssg/plugins.test.tsx",
+    "src/helper/websocket/index.test.ts",
+    "src/jsx/dom/hooks/index.test.tsx",
+    "src/jsx/hooks/index.ts",
+    "src/jsx/intrinsic-element/components.ts",
+    "src/middleware/combine/index.test.ts",
+    "src/types.ts",
+    "src/utils/accept.test.ts",
+    "src/utils/accept.ts"
+  ],
+  "added": 412,
+  "deleted": 194,
+  "file_changes": [
+    {
+      "path": "benchmarks/handle-event/index.js",
+      "added": 10,
+      "deleted": 8,
+      "attribution": "human"
+    },
+    {
+      "path": "bun.lock",
+      "added": 48,
+      "deleted": 115,
+      "attribution": "human"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "added": 10,
+      "deleted": 5,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 3,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/mock.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/stream-mock.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/aws-lambda/handler.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/cloudflare-pages/handler.test.ts",
+      "added": 4,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/utils.test.ts",
+      "added": 2,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/dev/index.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/plugins.test.tsx",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/websocket/index.test.ts",
+      "added": 0,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/hooks/index.test.tsx",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/hooks/index.ts",
+      "added": 0,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/components.ts",
+      "added": 0,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/combine/index.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/types.ts",
+      "added": 0,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/accept.test.ts",
+      "added": 107,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/accept.ts",
+      "added": 221,
+      "deleted": 41,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 412,
+  "human_deleted": 194,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
