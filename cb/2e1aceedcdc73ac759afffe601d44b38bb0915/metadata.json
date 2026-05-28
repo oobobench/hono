@@ -1,0 +1,50 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "cb2e1aceedcdc73ac759afffe601d44b38bb0915",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008729,
+  "message": "fix(aws-lambda): handle invalid header names in request processing (#4883)",
+  "files_changed": [
+    "package.json",
+    "src/adapter/aws-lambda/handler.test.ts",
+    "src/adapter/aws-lambda/handler.ts"
+  ],
+  "added": 70,
+  "deleted": 4,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/aws-lambda/handler.test.ts",
+      "added": 57,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/aws-lambda/handler.ts",
+      "added": 12,
+      "deleted": 2,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 70,
+  "human_deleted": 4,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
