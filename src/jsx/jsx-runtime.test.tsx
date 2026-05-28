@@ -43,6 +43,34 @@ describe('jsx-runtime', () => {
     )
   })
 
+  it('Should drop style values containing ";" in jsxAttr() to prevent CSS injection', () => {
+    expect(
+      String(jsxAttr('style', { color: 'red;background:blue', backgroundColor: 'white' }))
+    ).toBe('style="background-color:white"')
+  })
+
+  it('Should drop style values that hide declaration separators in CSS comments in jsxAttr()', () => {
+    expect(
+      String(
+        jsxAttr('style', {
+          color: 'red/*(*/;background:blue;position:fixed;top:0',
+          backgroundColor: 'white',
+        })
+      )
+    ).toBe('style="background-color:white"')
+  })
+
+  it('Should drop style property names that can inject declarations in jsxAttr()', () => {
+    expect(
+      String(
+        jsxAttr('style', {
+          'color;background-image': 'url(https://attacker.example/a.png)',
+          backgroundColor: 'white',
+        })
+      )
+    ).toBe('style="background-color:white"')
+  })
+
   // https://en.reactjs.org/docs/jsx-in-depth.html#booleans-null-and-undefined-are-ignored
   describe('Booleans, Null, and Undefined Are Ignored', () => {
     it.each([true, false, undefined, null])('%s', (item) => {

@@ -108,6 +108,53 @@ describe('JWT', () => {
     expect(authorized).toBeUndefined()
   })
 
+  describe('JwtTokenNotBefore with malformed nbf claim', () => {
+    it('rejects token with nbf as a non-numeric string', async () => {
+      const secret = 'a-secret'
+      const tok = await JWT.sign(
+        // @ts-expect-error - testing malformed payload (nbf must be number)
+        { message: 'hello', nbf: 'tomorrow' },
+        secret,
+        AlgorithmTypes.HS256
+      )
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenNotBefore(tok))
+      expect(authorized).toBeUndefined()
+    })
+
+    it('rejects token with nbf = Infinity (parsed from 1e400 in JSON)', async () => {
+      // JSON.stringify converts Infinity to null, so hand-craft the payload.
+      const secret = 'a-secret'
+      const encode = (s: string) => encodeBase64Url(utf8Encoder.encode(s).buffer).replace(/=/g, '')
+      const encodedHeader = encode('{"alg":"HS256","typ":"JWT"}')
+      const encodedPayload = encode('{"message":"hello","nbf":1e400}')
+      const signingInput = `${encodedHeader}.${encodedPayload}`
+      const signatureBuffer = await signing(
+        secret,
+        AlgorithmTypes.HS256,
+        utf8Encoder.encode(signingInput)
+      )
+      const tok = `${signingInput}.${encodeBase64Url(signatureBuffer).replace(/=/g, '')}`
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenNotBefore(tok))
+      expect(authorized).toBeUndefined()
+    })
+  })
+
   it('JwtTokenExpired', async () => {
     const tok =
       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzMwNDYxMDAsImV4cCI6MTYzMzA0NjQwMH0.H-OI1TWAbmK8RonvcpPaQcNvOKS9sxinEOsgKwjoiVo'
@@ -145,6 +192,68 @@ describe('JWT', () => {
     vi.useRealTimers()
   })
 
+  describe('JwtTokenExpired with malformed exp claim', () => {
+    it('rejects token with exp = 0 (epoch zero)', async () => {
+      const secret = 'a-secret'
+      const tok = await JWT.sign({ message: 'hello', exp: 0 }, secret, AlgorithmTypes.HS256)
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenExpired(tok))
+      expect(authorized).toBeUndefined()
+    })
+
+    it('rejects token with exp as a non-numeric string', async () => {
+      const secret = 'a-secret'
+      const tok = await JWT.sign(
+        // @ts-expect-error - testing malformed payload (exp must be number)
+        { message: 'hello', exp: 'tomorrow' },
+        secret,
+        AlgorithmTypes.HS256
+      )
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenExpired(tok))
+      expect(authorized).toBeUndefined()
+    })
+
+    it('rejects token with exp = Infinity (parsed from 1e400 in JSON)', async () => {
+      // JSON.stringify converts Infinity to null, so hand-craft the payload.
+      const secret = 'a-secret'
+      const encode = (s: string) => encodeBase64Url(utf8Encoder.encode(s).buffer).replace(/=/g, '')
+      const encodedHeader = encode('{"alg":"HS256","typ":"JWT"}')
+      const encodedPayload = encode('{"message":"hello","exp":1e400}')
+      const signingInput = `${encodedHeader}.${encodedPayload}`
+      const signatureBuffer = await signing(
+        secret,
+        AlgorithmTypes.HS256,
+        utf8Encoder.encode(signingInput)
+      )
+      const tok = `${signingInput}.${encodeBase64Url(signatureBuffer).replace(/=/g, '')}`
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenExpired(tok))
+      expect(authorized).toBeUndefined()
+    })
+  })
+
   it('JwtTokenIssuedAt', async () => {
     const now = 1633046400
     vi.useFakeTimers().setSystemTime(new Date().setTime(now * 1000))
@@ -163,6 +272,63 @@ describe('JWT', () => {
     }
     expect(err).toEqual(new JwtTokenIssuedAt(now, iat))
     expect(authorized).toBeUndefined()
+  })
+
+  describe('JwtTokenIssuedAt with malformed iat claim', () => {
+    it('rejects token with iat as a non-numeric string', async () => {
+      const now = 1633046400
+      vi.useFakeTimers().setSystemTime(new Date(now * 1000))
+
+      const secret = 'a-secret'
+      const tok = await JWT.sign(
+        // @ts-expect-error - testing malformed payload (iat must be number)
+        { message: 'hello', iat: 'tomorrow' },
+        secret,
+        AlgorithmTypes.HS256
+      )
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenIssuedAt(now, 'tomorrow' as unknown as number))
+      expect(authorized).toBeUndefined()
+
+      vi.useRealTimers()
+    })
+
+    it('rejects token with iat = Infinity (parsed from 1e400 in JSON)', async () => {
+      // JSON.stringify converts Infinity to null, so hand-craft the payload.
+      const now = 1633046400
+      vi.useFakeTimers().setSystemTime(new Date(now * 1000))
+
+      const secret = 'a-secret'
+      const encode = (s: string) => encodeBase64Url(utf8Encoder.encode(s).buffer).replace(/=/g, '')
+      const encodedHeader = encode('{"alg":"HS256","typ":"JWT"}')
+      const encodedPayload = encode('{"message":"hello","iat":1e400}')
+      const signingInput = `${encodedHeader}.${encodedPayload}`
+      const signatureBuffer = await signing(
+        secret,
+        AlgorithmTypes.HS256,
+        utf8Encoder.encode(signingInput)
+      )
+      const tok = `${signingInput}.${encodeBase64Url(signatureBuffer).replace(/=/g, '')}`
+
+      let err
+      let authorized
+      try {
+        authorized = await JWT.verify(tok, secret, AlgorithmTypes.HS256)
+      } catch (e) {
+        err = e
+      }
+      expect(err).toEqual(new JwtTokenIssuedAt(now, Infinity))
+      expect(authorized).toBeUndefined()
+
+      vi.useRealTimers()
+    })
   })
 
   it('JwtTokenIssuer (none)', async () => {

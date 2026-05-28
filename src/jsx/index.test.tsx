@@ -519,6 +519,110 @@ describe('render to string', () => {
       const template = <h1 style={{ '--myVar': 1 }}>Hello</h1>
       expect(template.toString()).toBe('<h1 style="--myVar:1px">Hello</h1>')
     })
+
+    describe('CSS injection prevention', () => {
+      it('should drop style values containing ";" to prevent CSS injection', () => {
+        const userInput =
+          'transparent;background:url(https://attacker.example/a.png);position:fixed;top:0'
+        const template = <div style={{ color: userInput }} />
+        const out = template.toString() as string
+        expect(out).not.toContain('background:url')
+        expect(out).not.toContain('position:fixed')
+        expect(out).not.toContain('color:')
+        expect(out).toBe('<div style=""></div>')
+      })
+
+      it('should drop only the unsafe property and keep other safe properties', () => {
+        const template = <div style={{ color: 'red;background:blue', backgroundColor: 'white' }} />
+        const out = template.toString() as string
+        expect(out).toBe('<div style="background-color:white"></div>')
+        expect(out).not.toContain('background:blue')
+      })
+
+      it('should drop style values that try to hide declaration separators in CSS comments', () => {
+        const template = (
+          <div
+            style={{
+              color: 'red/*(*/;background:blue;position:fixed;top:0',
+              backgroundColor: 'white',
+            }}
+          />
+        )
+        const out = template.toString() as string
+        expect(out).toBe('<div style="background-color:white"></div>')
+        expect(out).not.toContain('position:fixed')
+      })
+
+      it('should drop style values that try to expose declarations through CSS curly blocks', () => {
+        const template = (
+          <div
+            style={{
+              color: 'red{;background:blue}',
+              backgroundColor: 'white',
+            }}
+          />
+        )
+        const out = template.toString() as string
+        expect(out).toBe('<div style="background-color:white"></div>')
+        expect(out).not.toContain('background:blue')
+      })
+
+      it('should drop unterminated style values that can swallow following declarations', () => {
+        const template = <div style={{ color: 'red/*', display: 'none' }} />
+        const out = template.toString() as string
+        expect(out).toBe('<div style="display:none"></div>')
+        expect(out).not.toContain('color:')
+      })
+
+      it('should drop style property names that can inject declarations', () => {
+        const template = (
+          <div
+            style={{
+              'color;background-image': 'url(https://attacker.example/a.png)',
+              backgroundColor: 'white',
+            }}
+          />
+        )
+        const out = template.toString() as string
+        expect(out).toBe('<div style="background-color:white"></div>')
+        expect(out).not.toContain('background-image')
+      })
+
+      it('should still HTML-escape safe style values', () => {
+        const template = <h1 style={{ fontFamily: '"DejaVu Sans Mono", monospace' }}>Hello</h1>
+        expect(template.toString()).toBe(
+          '<h1 style="font-family:&quot;DejaVu Sans Mono&quot;, monospace">Hello</h1>'
+        )
+      })
+
+      it('should keep semicolons inside quoted style values', () => {
+        const template = <h1 style={{ fontFamily: '"a;b", sans-serif' }}>Hello</h1>
+        expect(template.toString()).toBe(
+          '<h1 style="font-family:&quot;a;b&quot;, sans-serif">Hello</h1>'
+        )
+      })
+
+      it('should drop quoted style values that use newlines to expose declaration separators', () => {
+        const template = (
+          <div
+            style={{
+              fontFamily: '"\n;background:url(https://attacker.example/a.png)',
+              backgroundColor: 'white',
+            }}
+          />
+        )
+        expect(template.toString()).toBe('<div style="background-color:white"></div>')
+      })
+
+      it('should keep numeric style values working', () => {
+        const template = <div style={{ fontSize: 10, lineHeight: 1.5 }} />
+        expect(template.toString()).toBe('<div style="font-size:10px;line-height:1.5"></div>')
+      })
+
+      it('should not throw when style values contain ";"', () => {
+        expect(() => (<div style={{ color: 'red;evil:1' }} />).toString()).not.toThrow()
+      })
+    })
   })
 
   describe('HtmlEscaped in props', () => {

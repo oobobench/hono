@@ -13,8 +13,7 @@ import type { StatusCode } from '../../utils/http-status'
 const defaultCacheableStatusCodes: ReadonlyArray<StatusCode> = [200]
 
 const shouldSkipCache = (res: Response) => {
-  const vary = res.headers.get('Vary')
-  if (vary && vary.includes('*')) {
+  if (res.headers.has('Vary')) {
     return true
   }
 
@@ -140,6 +139,11 @@ export const cache = (options: {
   }
 
   return async function cache(c, next) {
+    if (c.req.method !== 'GET' || c.req.raw.headers.has('Authorization')) {
+      await next()
+      return
+    }
+
     let key = c.req.url
     if (options.keyGenerator) {
       key = await options.keyGenerator(c)
