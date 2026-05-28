@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "84cb4b2734abfea46f3f0d8c2a33b7ac309b4e13",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008832,
+  "message": "fix(compress): respect Accept-Encoding when encoding option is set (#4951)",
+  "files_changed": [
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 142,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 115,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 27,
+      "deleted": 3,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 142,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
