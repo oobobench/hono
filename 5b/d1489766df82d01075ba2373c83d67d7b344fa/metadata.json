@@ -1,0 +1,708 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "5bd1489766df82d01075ba2373c83d67d7b344fa",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008556,
+  "message": "fix(jwt): use `Math.floor` instead of bitwise OR for safe timestamp (#4754)",
+  "files_changed": [
+    ".github/actions/perf-measures/action.yml",
+    "benchmarks/handle-event/index.js",
+    "benchmarks/routers-deno/README.md",
+    "benchmarks/routers/README.md",
+    "bun.lock",
+    "eslint.config.mjs",
+    "package.json",
+    "perf-measures/tsconfig.json",
+    "perf-measures/type-check/scripts/tsconfig.json",
+    "perf-measures/type-check/tsconfig.build.json",
+    "runtime-tests/bun/index.test.tsx",
+    "runtime-tests/bun/tsconfig.json",
+    "runtime-tests/fastly/index.test.ts",
+    "runtime-tests/fastly/tsconfig.json",
+    "runtime-tests/lambda-edge/tsconfig.json",
+    "runtime-tests/lambda/index.test.ts",
+    "runtime-tests/lambda/mock.ts",
+    "runtime-tests/lambda/stream-mock.ts",
+    "runtime-tests/lambda/stream.test.ts",
+    "runtime-tests/lambda/tsconfig.json",
+    "runtime-tests/node/tsconfig.json",
+    "runtime-tests/tsconfig.json",
+    "runtime-tests/workerd/tsconfig.json",
+    "src/adapter/aws-lambda/handler.ts",
+    "src/adapter/cloudflare-pages/handler.test.ts",
+    "src/adapter/lambda-edge/handler.test.ts",
+    "src/adapter/lambda-edge/handler.ts",
+    "src/adapter/service-worker/index.ts",
+    "src/client/client.test.ts",
+    "src/client/index.ts",
+    "src/client/types.ts",
+    "src/client/utils.test.ts",
+    "src/helper/css/common.ts",
+    "src/helper/css/index.test.tsx",
+    "src/helper/css/index.ts",
+    "src/helper/dev/index.test.ts",
+    "src/helper/ssg/plugins.test.tsx",
+    "src/helper/ssg/ssg.test.tsx",
+    "src/helper/ssg/ssg.ts",
+    "src/helper/ssg/utils.test.ts",
+    "src/helper/ssg/utils.ts",
+    "src/helper/streaming/sse.test.tsx",
+    "src/helper/streaming/sse.ts",
+    "src/helper/websocket/index.test.ts",
+    "src/hono-base.ts",
+    "src/jsx/dom/css.test.tsx",
+    "src/jsx/dom/css.ts",
+    "src/jsx/dom/hooks/index.test.tsx",
+    "src/jsx/dom/index.test.tsx",
+    "src/jsx/dom/intrinsic-element/components.test.tsx",
+    "src/jsx/dom/intrinsic-element/components.ts",
+    "src/jsx/dom/render.ts",
+    "src/jsx/hooks/index.ts",
+    "src/jsx/intrinsic-element/common.ts",
+    "src/jsx/intrinsic-element/components.test.tsx",
+    "src/jsx/intrinsic-element/components.ts",
+    "src/jsx/streaming.test.tsx",
+    "src/jsx/streaming.ts",
+    "src/jsx/types.ts",
+    "src/middleware/bearer-auth/index.test.ts",
+    "src/middleware/bearer-auth/index.ts",
+    "src/middleware/combine/index.test.ts",
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts",
+    "src/middleware/cors/index.test.ts",
+    "src/middleware/cors/index.ts",
+    "src/middleware/ip-restriction/index.test.ts",
+    "src/middleware/ip-restriction/index.ts",
+    "src/middleware/jsx-renderer/index.test.tsx",
+    "src/middleware/jsx-renderer/index.ts",
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/serve-static/index.test.ts",
+    "src/middleware/serve-static/index.ts",
+    "src/middleware/trailing-slash/index.test.ts",
+    "src/middleware/trailing-slash/index.ts",
+    "src/request.test.ts",
+    "src/request.ts",
+    "src/router/common.case.test.ts",
+    "src/types.test.ts",
+    "src/types.ts",
+    "src/utils/accept.test.ts",
+    "src/utils/accept.ts",
+    "src/utils/body.test.ts",
+    "src/utils/body.ts",
+    "src/utils/cookie.test.ts",
+    "src/utils/cookie.ts",
+    "src/utils/ipaddr.ts",
+    "src/utils/jwt/jwt.test.ts",
+    "src/utils/jwt/jwt.ts",
+    "src/utils/mime.test.ts",
+    "src/utils/mime.ts",
+    "src/utils/url.ts",
+    "tsconfig.base.json",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "tsconfig.spec.json"
+  ],
+  "added": 503,
+  "deleted": 3263,
+  "file_changes": [
+    {
+      "path": ".github/actions/perf-measures/action.yml",
+      "added": 1,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "benchmarks/handle-event/index.js",
+      "added": 8,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "benchmarks/routers-deno/README.md",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "benchmarks/routers/README.md",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "bun.lock",
+      "added": 114,
+      "deleted": 51,
+      "attribution": "human"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "added": 5,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 3,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/type-check/scripts/tsconfig.json",
+      "added": 0,
+      "deleted": 7,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/type-check/tsconfig.build.json",
+      "added": 4,
+      "deleted": 7,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/bun/index.test.tsx",
+      "added": 5,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/bun/tsconfig.json",
+      "added": 0,
+      "deleted": 12,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/fastly/index.test.ts",
+      "added": 1,
+      "deleted": 5,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/fastly/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda-edge/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/index.test.ts",
+      "added": 4,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/mock.ts",
+      "added": 9,
+      "deleted": 5,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/stream-mock.ts",
+      "added": 2,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/stream.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/node/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/tsconfig.json",
+      "added": 4,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/workerd/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/aws-lambda/handler.ts",
+      "added": 7,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/cloudflare-pages/handler.test.ts",
+      "added": 4,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/lambda-edge/handler.test.ts",
+      "added": 1,
+      "deleted": 34,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/lambda-edge/handler.ts",
+      "added": 1,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/service-worker/index.ts",
+      "added": 3,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/client.test.ts",
+      "added": 0,
+      "deleted": 119,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/index.ts",
+      "added": 0,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/types.ts",
+      "added": 5,
+      "deleted": 39,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/utils.test.ts",
+      "added": 2,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/common.ts",
+      "added": 9,
+      "deleted": 94,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/index.test.tsx",
+      "added": 0,
+      "deleted": 262,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/index.ts",
+      "added": 6,
+      "deleted": 26,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/dev/index.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/plugins.test.tsx",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/ssg.test.tsx",
+      "added": 0,
+      "deleted": 58,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/ssg.ts",
+      "added": 10,
+      "deleted": 19,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/utils.test.ts",
+      "added": 1,
+      "deleted": 26,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/utils.ts",
+      "added": 0,
+      "deleted": 12,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/streaming/sse.test.tsx",
+      "added": 0,
+      "deleted": 80,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/streaming/sse.ts",
+      "added": 0,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/websocket/index.test.ts",
+      "added": 2,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/hono-base.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/css.test.tsx",
+      "added": 0,
+      "deleted": 28,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/css.ts",
+      "added": 6,
+      "deleted": 25,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/hooks/index.test.tsx",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/index.test.tsx",
+      "added": 1,
+      "deleted": 91,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/intrinsic-element/components.test.tsx",
+      "added": 0,
+      "deleted": 298,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/intrinsic-element/components.ts",
+      "added": 11,
+      "deleted": 51,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/render.ts",
+      "added": 8,
+      "deleted": 23,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/hooks/index.ts",
+      "added": 1,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/common.ts",
+      "added": 0,
+      "deleted": 12,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/components.test.tsx",
+      "added": 0,
+      "deleted": 187,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/components.ts",
+      "added": 13,
+      "deleted": 27,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/streaming.test.tsx",
+      "added": 0,
+      "deleted": 104,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/streaming.ts",
+      "added": 3,
+      "deleted": 13,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/types.ts",
+      "added": 2,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "added": 0,
+      "deleted": 59,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "added": 8,
+      "deleted": 19,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/combine/index.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 0,
+      "deleted": 52,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 0,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "added": 0,
+      "deleted": 69,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "added": 2,
+      "deleted": 7,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.test.ts",
+      "added": 0,
+      "deleted": 26,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "added": 14,
+      "deleted": 79,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jsx-renderer/index.test.tsx",
+      "added": 0,
+      "deleted": 56,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jsx-renderer/index.ts",
+      "added": 3,
+      "deleted": 9,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "added": 1,
+      "deleted": 30,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwt/index.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/serve-static/index.test.ts",
+      "added": 1,
+      "deleted": 27,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/serve-static/index.ts",
+      "added": 2,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/trailing-slash/index.test.ts",
+      "added": 0,
+      "deleted": 57,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/trailing-slash/index.ts",
+      "added": 2,
+      "deleted": 23,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.test.ts",
+      "added": 0,
+      "deleted": 63,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.ts",
+      "added": 3,
+      "deleted": 5,
+      "attribution": "human"
+    },
+    {
+      "path": "src/router/common.case.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/types.test.ts",
+      "added": 1,
+      "deleted": 73,
+      "attribution": "human"
+    },
+    {
+      "path": "src/types.ts",
+      "added": 94,
+      "deleted": 93,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/accept.test.ts",
+      "added": 4,
+      "deleted": 107,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/accept.ts",
+      "added": 41,
+      "deleted": 221,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/body.test.ts",
+      "added": 0,
+      "deleted": 57,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/body.ts",
+      "added": 0,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.test.ts",
+      "added": 0,
+      "deleted": 64,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.ts",
+      "added": 5,
+      "deleted": 37,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/ipaddr.ts",
+      "added": 3,
+      "deleted": 16,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.test.ts",
+      "added": 0,
+      "deleted": 103,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.ts",
+      "added": 12,
+      "deleted": 17,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/mime.test.ts",
+      "added": 0,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/mime.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/url.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "added": 0,
+      "deleted": 15,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.build.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.json",
+      "added": 28,
+      "deleted": 11,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.spec.json",
+      "added": 0,
+      "deleted": 11,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 503,
+  "human_deleted": 3263,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
