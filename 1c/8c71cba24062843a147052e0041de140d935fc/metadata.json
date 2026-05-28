@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "1c8c71cba24062843a147052e0041de140d935fc",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008819,
+  "message": "fix(jsx): widen jsx and jsxFn children to Child[] (#4947)",
+  "files_changed": [
+    "src/jsx/base.test.tsx",
+    "src/jsx/base.ts"
+  ],
+  "added": 9,
+  "deleted": 11,
+  "file_changes": [
+    {
+      "path": "src/jsx/base.test.tsx",
+      "added": 7,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/base.ts",
+      "added": 2,
+      "deleted": 10,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 9,
+  "human_deleted": 11,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
