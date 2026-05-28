@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "a2310578e5ec243cd31ecbd7165e990aa8432cd5",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008770,
+  "message": "fix(types): propagate middleware response types to app.on overloads (#4906)",
+  "files_changed": [
+    "src/types.test.ts",
+    "src/types.ts"
+  ],
+  "added": 672,
+  "deleted": 106,
+  "file_changes": [
+    {
+      "path": "src/types.test.ts",
+      "added": 276,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/types.ts",
+      "added": 396,
+      "deleted": 106,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 672,
+  "human_deleted": 106,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
