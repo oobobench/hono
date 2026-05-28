@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "e582647cde7d8c0d4dc7715e66df99b6532d7528",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008672,
+  "message": "fix(ssg): pass SSG_CONTEXT to forGetInfoURLRequest (#4810)",
+  "files_changed": [
+    "src/helper/ssg/ssg.test.tsx",
+    "src/helper/ssg/ssg.ts"
+  ],
+  "added": 25,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/helper/ssg/ssg.test.tsx",
+      "added": 24,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/ssg.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 25,
+  "human_deleted": 1,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
