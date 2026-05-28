@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "9ceca5cb4abd086cc1b825a76a43d5fdf1435acd",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008696,
+  "message": "fix(compress): convert strong ETag to weak ETag when compressing (#4848)",
+  "files_changed": [
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 58,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 52,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 6,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 58,
+  "human_deleted": 0,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
