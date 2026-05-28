@@ -1,0 +1,191 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "e6d1c21b231525fd41dfcf4c3dab6be0bd4c60ce",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780023522,
+  "message": "docs: add CLAUDE.md for AI agent context",
+  "files_changed": [
+    "CLAUDE.md"
+  ],
+  "added": 34,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "CLAUDE.md",
+      "added": 34,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 34,
+  "human_deleted": 0,
+  "ai_percentage": 0.0,
+  "session_ids": [
+    "0034f059-e4da-43b2-bf00-245033143322",
+    "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+    "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+    "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+    "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+    "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/compose.ts",
+      "sessions": [
+        {
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+          "role": "reader"
+        },
+        {
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/context.ts",
+      "sessions": [
+        {
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+          "role": "reader"
+        },
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "reader"
+        },
+        {
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/hono-base.ts",
+      "sessions": [
+        {
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+          "role": "reader"
+        },
+        {
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+          "role": "both"
+        },
+        {
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+          "role": "both"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        },
+        {
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t4c49f50a39777b30",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "fa5f1b0ff38b5f54bc9137ac92f66d523d7071b3"
+    },
+    {
+      "id": "t2f9ad28bbc935f48",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "b22d96353447ae984770fa3816f0cc406d60d6ed"
+    },
+    {
+      "id": "tab6b7020a0cc3a54",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "47cdffa4ba674bda30e143164b4ab81c8254cd63"
+    },
+    {
+      "id": "t26d6c0ecc7d93fcf",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "3e0e4464f06b0205745b288543113e5043a9e045"
+    }
+  ]
+}

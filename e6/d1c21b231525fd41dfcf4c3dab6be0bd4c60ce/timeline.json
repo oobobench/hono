@@ -1,0 +1,540 @@
+{
+  "events": [
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021320
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021324
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021641
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021644
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021648
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021687
+    },
+    {
+      "action": "read",
+      "path": "src/compose.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021740
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021749
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021753
+    },
+    {
+      "action": "read",
+      "path": "src/hono-base.ts",
+      "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3",
+      "timestamp": 1780021878
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021928
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021931
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021934
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021937
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/ip-restriction/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021940
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021942
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021945
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021948
+    },
+    {
+      "action": "read",
+      "path": "src/types.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021950
+    },
+    {
+      "action": "read",
+      "path": "src/adapter/aws-lambda/conninfo.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021956
+    },
+    {
+      "action": "read",
+      "path": "src/helper/conninfo/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021959
+    },
+    {
+      "action": "read",
+      "path": "src/helper/conninfo/types.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021961
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021976
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021979
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022005
+    },
+    {
+      "action": "read",
+      "path": "package.json",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022007
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022029
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022067
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022072
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022087
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022092
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022098
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/jwt/index.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022128
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/jwt/jwt.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022129
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/jwt/index.test.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022131
+    },
+    {
+      "action": "read",
+      "path": "src/utils/jwt/jwt.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022135
+    },
+    {
+      "action": "read",
+      "path": "src/utils/jwt/types.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022135
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022198
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/jwt/jwt.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022207
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/jwt/jwt.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022225
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/jwt/index.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022229
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/jwt/index.test.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022281
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/jwt/index.test.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022283
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/jwt/index.test.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022318
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/jwt/index.test.ts",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "timestamp": 1780022336
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022362
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022362
+    },
+    {
+      "action": "read",
+      "path": "package.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022426
+    },
+    {
+      "action": "read",
+      "path": "src/utils/compress.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022426
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022443
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022449
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022453
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022456
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022458
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022482
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.spec.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022485
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.base.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022487
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022511
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022608
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022610
+    },
+    {
+      "action": "read",
+      "path": "src/compose.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022902
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022917
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022968
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780022986
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cache/index.test.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023019
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023068
+    },
+    {
+      "action": "read",
+      "path": "src/hono-base.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023083
+    },
+    {
+      "action": "read",
+      "path": "src/hono-base.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023087
+    },
+    {
+      "action": "read",
+      "path": "src/hono-base.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023112
+    },
+    {
+      "action": "read",
+      "path": "src/context.ts",
+      "session_id": "0034f059-e4da-43b2-bf00-245033143322",
+      "timestamp": 1780023137
+    }
+  ],
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/compose.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322"
+        },
+        {
+          "role": "reader",
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+        }
+      ]
+    },
+    {
+      "path": "src/context.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322"
+        },
+        {
+          "role": "reader",
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98"
+        },
+        {
+          "role": "reader",
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+        }
+      ]
+    },
+    {
+      "path": "src/hono-base.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322"
+        },
+        {
+          "role": "reader",
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322"
+        },
+        {
+          "role": "both",
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "0034f059-e4da-43b2-bf00-245033143322"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        },
+        {
+          "role": "both",
+          "session_id": "63c7fcfa-d77f-4cb5-b368-137bbf10b5b3"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    }
+  ],
+  "longest_session_ms": 560000,
+  "session_count": 6
+}
