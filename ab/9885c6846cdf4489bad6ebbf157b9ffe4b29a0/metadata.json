@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "ab9885c6846cdf4489bad6ebbf157b9ffe4b29a0",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008615,
+  "message": "fix(jsx): Fix \"Invalid state: Controller is already closed\" (#4770)",
+  "files_changed": [
+    "src/jsx/streaming.test.tsx",
+    "src/jsx/streaming.ts"
+  ],
+  "added": 117,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "src/jsx/streaming.test.tsx",
+      "added": 104,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/streaming.ts",
+      "added": 13,
+      "deleted": 3,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 117,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
