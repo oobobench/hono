@@ -1,0 +1,155 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "80cab8d0f936b4d756e6300779e0b965b0ad4462",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008776,
+  "message": "fix(serveStatic): make options parameter optional in all adapters (#4934)",
+  "files_changed": [
+    ".github/actions/perf-measures/action.yml",
+    ".github/workflows/autofix.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/cr.yml",
+    ".github/workflows/no-response.yml",
+    ".github/workflows/release.yml",
+    "package.json",
+    "src/adapter/bun/serve-static.ts",
+    "src/adapter/cloudflare-workers/serve-static.ts",
+    "src/adapter/deno/serve-static.ts",
+    "src/jsx/index.test.tsx",
+    "src/jsx/jsx-runtime.test.tsx",
+    "src/jsx/utils.test.ts",
+    "src/jsx/utils.ts",
+    "src/middleware/cache/index.test.ts",
+    "src/middleware/cache/index.ts",
+    "src/utils/jwt/jwt.test.ts",
+    "src/utils/jwt/jwt.ts"
+  ],
+  "added": 718,
+  "deleted": 147,
+  "file_changes": [
+    {
+      "path": ".github/actions/perf-measures/action.yml",
+      "added": 3,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": ".github/workflows/autofix.yml",
+      "added": 3,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "added": 41,
+      "deleted": 35,
+      "attribution": "human"
+    },
+    {
+      "path": ".github/workflows/cr.yml",
+      "added": 10,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": ".github/workflows/no-response.yml",
+      "added": 2,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "added": 5,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/bun/serve-static.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/cloudflare-workers/serve-static.ts",
+      "added": 2,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/deno/serve-static.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/index.test.tsx",
+      "added": 104,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/jsx-runtime.test.tsx",
+      "added": 28,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.test.ts",
+      "added": 146,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.ts",
+      "added": 110,
+      "deleted": 13,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "added": 77,
+      "deleted": 72,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "added": 6,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.test.ts",
+      "added": 166,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.ts",
+      "added": 12,
+      "deleted": 6,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 718,
+  "human_deleted": 147,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
