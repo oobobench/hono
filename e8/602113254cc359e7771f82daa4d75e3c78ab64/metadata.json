@@ -1,0 +1,36 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "e8602113254cc359e7771f82daa4d75e3c78ab64",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008844,
+  "message": "feat: add msgpack as a compressible content type (#4957)",
+  "files_changed": [
+    "src/utils/compress.ts"
+  ],
+  "added": 1,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/utils/compress.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 1,
+  "human_deleted": 1,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
