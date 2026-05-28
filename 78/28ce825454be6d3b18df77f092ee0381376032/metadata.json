@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "7828ce825454be6d3b18df77f092ee0381376032",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008584,
+  "message": "fix(jwt): prevent memory leak by avoiding mutation of options object (#4759)",
+  "files_changed": [
+    "src/utils/jwt/jwt.test.ts",
+    "src/utils/jwt/jwt.ts"
+  ],
+  "added": 64,
+  "deleted": 7,
+  "file_changes": [
+    {
+      "path": "src/utils/jwt/jwt.test.ts",
+      "added": 58,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.ts",
+      "added": 6,
+      "deleted": 7,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 64,
+  "human_deleted": 7,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
