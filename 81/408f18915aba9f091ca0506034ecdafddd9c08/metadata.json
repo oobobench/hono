@@ -1,0 +1,218 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "81408f18915aba9f091ca0506034ecdafddd9c08",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008635,
+  "message": "feat(jsx-renderer): support function-based options (#4780)",
+  "files_changed": [
+    ".github/actions/perf-measures/action.yml",
+    "bun.lock",
+    "package.json",
+    "perf-measures/tsconfig.json",
+    "perf-measures/type-check/scripts/tsconfig.json",
+    "perf-measures/type-check/tsconfig.build.json",
+    "runtime-tests/bun/index.test.tsx",
+    "runtime-tests/bun/tsconfig.json",
+    "runtime-tests/fastly/index.test.ts",
+    "runtime-tests/fastly/tsconfig.json",
+    "runtime-tests/lambda-edge/tsconfig.json",
+    "runtime-tests/lambda/index.test.ts",
+    "runtime-tests/lambda/mock.ts",
+    "runtime-tests/lambda/stream-mock.ts",
+    "runtime-tests/lambda/stream.test.ts",
+    "runtime-tests/lambda/tsconfig.json",
+    "runtime-tests/node/tsconfig.json",
+    "runtime-tests/tsconfig.json",
+    "runtime-tests/workerd/tsconfig.json",
+    "src/adapter/aws-lambda/handler.ts",
+    "src/jsx/types.ts",
+    "src/middleware/jsx-renderer/index.test.tsx",
+    "src/middleware/jsx-renderer/index.ts",
+    "tsconfig.base.json",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "tsconfig.spec.json"
+  ],
+  "added": 218,
+  "deleted": 80,
+  "file_changes": [
+    {
+      "path": ".github/actions/perf-measures/action.yml",
+      "added": 3,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "bun.lock",
+      "added": 4,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/tsconfig.json",
+      "added": 0,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/type-check/scripts/tsconfig.json",
+      "added": 7,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "perf-measures/type-check/tsconfig.build.json",
+      "added": 7,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/bun/index.test.tsx",
+      "added": 10,
+      "deleted": 5,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/bun/tsconfig.json",
+      "added": 12,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/fastly/index.test.ts",
+      "added": 5,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/fastly/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda-edge/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/index.test.ts",
+      "added": 6,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/mock.ts",
+      "added": 5,
+      "deleted": 9,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/stream-mock.ts",
+      "added": 2,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/stream.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/lambda/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/node/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/tsconfig.json",
+      "added": 0,
+      "deleted": 4,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/workerd/tsconfig.json",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/aws-lambda/handler.ts",
+      "added": 1,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/types.ts",
+      "added": 1,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jsx-renderer/index.test.tsx",
+      "added": 56,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jsx-renderer/index.ts",
+      "added": 9,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "added": 15,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.build.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.json",
+      "added": 11,
+      "deleted": 28,
+      "attribution": "human"
+    },
+    {
+      "path": "tsconfig.spec.json",
+      "added": 11,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 218,
+  "human_deleted": 80,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
