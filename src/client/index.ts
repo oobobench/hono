@@ -13,5 +13,4 @@ export type {
   ClientRequest,
   ClientResponse,
   ApplyGlobalResponse,
-  PickResponseByStatusCode,
 } from './types'

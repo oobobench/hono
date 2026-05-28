@@ -3,6 +3,7 @@
  * This module contains some type definitions for the Hono modules.
  */
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Context } from './context'
 import type { HonoBase } from './hono-base'
@@ -154,7 +155,7 @@ export interface HandlerInterface<
     R extends HandlerResponse<any> = any,
     E2 extends Env = E,
     E3 extends Env = IntersectNonAnyTypes<[E, E2]>,
-    M1 extends H<E2, P, I> = H<E2, P, I>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
   >(
     ...handlers: [H<E2, P, I> & M1, H<E3, P, I2, R>]
   ): HonoBase<
@@ -192,8 +193,8 @@ export interface HandlerInterface<
     E3 extends Env = IntersectNonAnyTypes<[E, E2]>,
     E4 extends Env = IntersectNonAnyTypes<[E, E2, E3]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
   >(
     ...handlers: [H<E2, P, I> & M1, H<E3, P, I2> & M2, H<E4, P, I3, R>]
   ): HonoBase<
@@ -219,7 +220,7 @@ export interface HandlerInterface<
     E2 extends Env = E,
     E3 extends Env = IntersectNonAnyTypes<[E, E2]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
   >(
     path: P,
     ...handlers: [H<E2, MergedPath, I> & M1, H<E3, MergedPath, I2, R>]
@@ -250,9 +251,9 @@ export interface HandlerInterface<
     E4 extends Env = IntersectNonAnyTypes<[E, E2, E3]>,
     E5 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
   >(
     ...handlers: [H<E2, P, I> & M1, H<E3, P, I2> & M2, H<E4, P, I3> & M3, H<E5, P, I4, R>]
   ): HonoBase<
@@ -283,8 +284,8 @@ export interface HandlerInterface<
     E3 extends Env = IntersectNonAnyTypes<[E, E2]>,
     E4 extends Env = IntersectNonAnyTypes<[E, E2, E3]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
   >(
     path: P,
     ...handlers: [H<E2, MergedPath, I> & M1, H<E3, MergedPath, I2> & M2, H<E4, MergedPath, I3, R>]
@@ -317,10 +318,10 @@ export interface HandlerInterface<
     E5 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4]>,
     E6 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -360,9 +361,9 @@ export interface HandlerInterface<
     E4 extends Env = IntersectNonAnyTypes<[E, E2, E3]>,
     E5 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -405,11 +406,11 @@ export interface HandlerInterface<
     E6 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5]>,
     E7 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
-    M5 extends H<E6, P, I5> = H<E6, P, I5>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
+    M5 extends H<E6, P, any> = H<E6, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -453,10 +454,10 @@ export interface HandlerInterface<
     E5 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4]>,
     E6 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -503,12 +504,12 @@ export interface HandlerInterface<
     E7 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6]>,
     E8 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
-    M5 extends H<E6, P, I5> = H<E6, P, I5>,
-    M6 extends H<E7, P, I6> = H<E7, P, I6>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
+    M5 extends H<E6, P, any> = H<E6, P, any>,
+    M6 extends H<E7, P, any> = H<E7, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -556,11 +557,11 @@ export interface HandlerInterface<
     E6 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5]>,
     E7 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
-    M5 extends H<E6, MergedPath, I5> = H<E6, MergedPath, I5>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
+    M5 extends H<E6, MergedPath, any> = H<E6, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -611,13 +612,13 @@ export interface HandlerInterface<
     E8 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7]>,
     E9 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
-    M5 extends H<E6, P, I5> = H<E6, P, I5>,
-    M6 extends H<E7, P, I6> = H<E7, P, I6>,
-    M7 extends H<E8, P, I7> = H<E8, P, I7>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
+    M5 extends H<E6, P, any> = H<E6, P, any>,
+    M6 extends H<E7, P, any> = H<E7, P, any>,
+    M7 extends H<E8, P, any> = H<E8, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -669,12 +670,12 @@ export interface HandlerInterface<
     E7 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6]>,
     E8 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
-    M5 extends H<E6, MergedPath, I5> = H<E6, MergedPath, I5>,
-    M6 extends H<E7, MergedPath, I6> = H<E7, MergedPath, I6>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
+    M5 extends H<E6, MergedPath, any> = H<E6, MergedPath, any>,
+    M6 extends H<E7, MergedPath, any> = H<E7, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -729,14 +730,14 @@ export interface HandlerInterface<
     E9 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8]>,
     E10 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
-    M5 extends H<E6, P, I5> = H<E6, P, I5>,
-    M6 extends H<E7, P, I6> = H<E7, P, I6>,
-    M7 extends H<E8, P, I7> = H<E8, P, I7>,
-    M8 extends H<E9, P, I8> = H<E9, P, I8>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
+    M5 extends H<E6, P, any> = H<E6, P, any>,
+    M6 extends H<E7, P, any> = H<E7, P, any>,
+    M7 extends H<E8, P, any> = H<E8, P, any>,
+    M8 extends H<E9, P, any> = H<E9, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -792,13 +793,13 @@ export interface HandlerInterface<
     E8 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7]>,
     E9 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
-    M5 extends H<E6, MergedPath, I5> = H<E6, MergedPath, I5>,
-    M6 extends H<E7, MergedPath, I6> = H<E7, MergedPath, I6>,
-    M7 extends H<E8, MergedPath, I7> = H<E8, MergedPath, I7>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
+    M5 extends H<E6, MergedPath, any> = H<E6, MergedPath, any>,
+    M6 extends H<E7, MergedPath, any> = H<E7, MergedPath, any>,
+    M7 extends H<E8, MergedPath, any> = H<E8, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -857,15 +858,15 @@ export interface HandlerInterface<
     E10 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9]>,
     E11 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9, E10]>,
     // Middleware
-    M1 extends H<E2, P, I> = H<E2, P, I>,
-    M2 extends H<E3, P, I2> = H<E3, P, I2>,
-    M3 extends H<E4, P, I3> = H<E4, P, I3>,
-    M4 extends H<E5, P, I4> = H<E5, P, I4>,
-    M5 extends H<E6, P, I5> = H<E6, P, I5>,
-    M6 extends H<E7, P, I6> = H<E7, P, I6>,
-    M7 extends H<E8, P, I7> = H<E8, P, I7>,
-    M8 extends H<E9, P, I8> = H<E9, P, I8>,
-    M9 extends H<E10, P, I9> = H<E10, P, I9>,
+    M1 extends H<E2, P, any> = H<E2, P, any>,
+    M2 extends H<E3, P, any> = H<E3, P, any>,
+    M3 extends H<E4, P, any> = H<E4, P, any>,
+    M4 extends H<E5, P, any> = H<E5, P, any>,
+    M5 extends H<E6, P, any> = H<E6, P, any>,
+    M6 extends H<E7, P, any> = H<E7, P, any>,
+    M7 extends H<E8, P, any> = H<E8, P, any>,
+    M8 extends H<E9, P, any> = H<E9, P, any>,
+    M9 extends H<E10, P, any> = H<E10, P, any>,
   >(
     ...handlers: [
       H<E2, P, I> & M1,
@@ -925,14 +926,14 @@ export interface HandlerInterface<
     E9 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8]>,
     E10 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
-    M5 extends H<E6, MergedPath, I5> = H<E6, MergedPath, I5>,
-    M6 extends H<E7, MergedPath, I6> = H<E7, MergedPath, I6>,
-    M7 extends H<E8, MergedPath, I7> = H<E8, MergedPath, I7>,
-    M8 extends H<E9, MergedPath, I8> = H<E9, MergedPath, I8>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
+    M5 extends H<E6, MergedPath, any> = H<E6, MergedPath, any>,
+    M6 extends H<E7, MergedPath, any> = H<E7, MergedPath, any>,
+    M7 extends H<E8, MergedPath, any> = H<E8, MergedPath, any>,
+    M8 extends H<E9, MergedPath, any> = H<E9, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -994,15 +995,15 @@ export interface HandlerInterface<
     E10 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9]>,
     E11 extends Env = IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9, E10]>,
     // Middleware
-    M1 extends H<E2, MergedPath, I> = H<E2, MergedPath, I>,
-    M2 extends H<E3, MergedPath, I2> = H<E3, MergedPath, I2>,
-    M3 extends H<E4, MergedPath, I3> = H<E4, MergedPath, I3>,
-    M4 extends H<E5, MergedPath, I4> = H<E5, MergedPath, I4>,
-    M5 extends H<E6, MergedPath, I5> = H<E6, MergedPath, I5>,
-    M6 extends H<E7, MergedPath, I6> = H<E7, MergedPath, I6>,
-    M7 extends H<E8, MergedPath, I7> = H<E8, MergedPath, I7>,
-    M8 extends H<E9, MergedPath, I8> = H<E9, MergedPath, I8>,
-    M9 extends H<E10, MergedPath, I9> = H<E10, MergedPath, I9>,
+    M1 extends H<E2, MergedPath, any> = H<E2, MergedPath, any>,
+    M2 extends H<E3, MergedPath, any> = H<E3, MergedPath, any>,
+    M3 extends H<E4, MergedPath, any> = H<E4, MergedPath, any>,
+    M4 extends H<E5, MergedPath, any> = H<E5, MergedPath, any>,
+    M5 extends H<E6, MergedPath, any> = H<E6, MergedPath, any>,
+    M6 extends H<E7, MergedPath, any> = H<E7, MergedPath, any>,
+    M7 extends H<E8, MergedPath, any> = H<E8, MergedPath, any>,
+    M8 extends H<E9, MergedPath, any> = H<E9, MergedPath, any>,
+    M9 extends H<E10, MergedPath, any> = H<E10, MergedPath, any>,
   >(
     path: P,
     ...handlers: [
@@ -1790,7 +1791,7 @@ export interface OnHandlerInterface<
     ]
   ): HonoBase<
     IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11]>,
-    S & ToSchema<M, MergePath<BasePath, P>, I10, MergeTypedResponse<R>>,
+    S & ToSchema<M, MergePath<BasePath, P>, I10, MergeTypedResponse<HandlerResponse<any>>>,
     BasePath,
     MergePath<BasePath, P>
   >
@@ -2095,7 +2096,7 @@ export interface OnHandlerInterface<
     ]
   ): HonoBase<
     IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9, E10]>,
-    S & ToSchema<M, MergePath<BasePath, P>, I9, MergeTypedResponse<R>>,
+    S & ToSchema<M, MergePath<BasePath, P>, I9, MergeTypedResponse<HandlerResponse<any>>>,
     BasePath,
     MergePath<BasePath, P>
   >
@@ -2143,7 +2144,7 @@ export interface OnHandlerInterface<
     ]
   ): HonoBase<
     IntersectNonAnyTypes<[E, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11]>,
-    S & ToSchema<M, MergePath<BasePath, P>, I10, MergeTypedResponse<R>>,
+    S & ToSchema<M, MergePath<BasePath, P>, I10, MergeTypedResponse<HandlerResponse<any>>>,
     BasePath,
     MergePath<BasePath, P>
   >

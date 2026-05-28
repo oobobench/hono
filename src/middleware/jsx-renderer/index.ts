@@ -31,14 +31,8 @@ type ComponentWithChildren = (
 ) => HtmlEscapedString | Promise<HtmlEscapedString>
 
 const createRenderer =
-  (
-    c: Context,
-    Layout: FC,
-    component?: Component,
-    options?: RendererOptions | ((c: Context) => RendererOptions)
-  ) =>
+  (c: Context, Layout: FC, component?: Component, options?: RendererOptions) =>
   (children: JSXNode, props: PropsForRenderer) => {
-    options = typeof options === 'function' ? options(c) : options
     const docType =
       typeof options?.docType === 'string'
         ? options.docType
@@ -113,9 +107,9 @@ const createRenderer =
  * })
  * ```
  */
-export const jsxRenderer = <E extends Env = Env>(
+export const jsxRenderer = (
   component?: ComponentWithChildren,
-  options?: RendererOptions | ((c: Context<E>) => RendererOptions)
+  options?: RendererOptions
 ): MiddlewareHandler =>
   function jsxRenderer(c, next) {
     const Layout = (c.getLayout() ?? Fragment) as FC

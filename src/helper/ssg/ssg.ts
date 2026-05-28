@@ -6,13 +6,7 @@ import { getExtension } from '../../utils/mime'
 import type { AddedSSGDataRequest, SSGParams } from './middleware'
 import { SSG_CONTEXT, X_HONO_DISABLE_SSG_HEADER_KEY } from './middleware'
 import { defaultPlugin } from './plugins'
-import {
-  dirname,
-  ensureWithinOutDir,
-  filterStaticGenerateRoutes,
-  isDynamicRoute,
-  joinPaths,
-} from './utils'
+import { dirname, filterStaticGenerateRoutes, isDynamicRoute, joinPaths } from './utils'
 
 const DEFAULT_CONCURRENCY = 2 // default concurrency for ssg
 
@@ -55,20 +49,17 @@ const generateFilePath = (
 ): string => {
   const extension = determineExtension(mimeType, extensionMap)
 
-  let filePath: string
   if (routePath.endsWith(`.${extension}`)) {
-    filePath = joinPaths(outDir, routePath)
-  } else if (routePath === '/') {
-    filePath = joinPaths(outDir, `index.${extension}`)
-  } else if (routePath.endsWith('/')) {
-    filePath = joinPaths(outDir, routePath, `index.${extension}`)
-  } else {
-    filePath = joinPaths(outDir, `${routePath}.${extension}`)
+    return joinPaths(outDir, routePath)
   }
 
-  ensureWithinOutDir(outDir, filePath)
-
-  return filePath
+  if (routePath === '/') {
+    return joinPaths(outDir, `index.${extension}`)
+  }
+  if (routePath.endsWith('/')) {
+    return joinPaths(outDir, routePath, `index.${extension}`)
+  }
+  return joinPaths(outDir, `${routePath}.${extension}`)
 }
 
 const parseResponseContent = async (response: Response): Promise<string | ArrayBuffer> => {
@@ -238,7 +229,7 @@ export const fetchRoutesContent = function* <
           forGetInfoURLRequest = maybeRequest as unknown as AddedSSGDataRequest
         }
 
-        await pool.run(() => app.fetch(forGetInfoURLRequest, { [SSG_CONTEXT]: true }))
+        await pool.run(() => app.fetch(forGetInfoURLRequest))
 
         if (!forGetInfoURLRequest.ssgParams) {
           if (isDynamicRoute(route.path)) {

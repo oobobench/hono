@@ -401,53 +401,6 @@ describe('OnHandlerInterface', () => {
     }
     type verify = Expect<Equal<Expected, Actual>>
   })
-
-  test('app.on(method, path, ...10 handlers) - last handler response type should be inferred', () => {
-    const noop: MiddlewareHandler = async (_c, next) => {
-      await next()
-    }
-    const route = app.on('GET', '/x10', noop, noop, noop, noop, noop, noop, noop, noop, noop, (c) =>
-      c.json({ success: true })
-    )
-    type Actual = ExtractSchema<typeof route>['/x10']['$get']['output']
-    type Expected = { success: true }
-    type verify = Expect<Equal<Expected, Actual>>
-  })
-
-  test('app.on(method[], path, ...9 handlers) - last handler response type should be inferred', () => {
-    const noop: MiddlewareHandler = async (_c, next) => {
-      await next()
-    }
-    const route = app.on(['GET'], '/x9-arr', noop, noop, noop, noop, noop, noop, noop, noop, (c) =>
-      c.json({ success: true })
-    )
-    type Actual = ExtractSchema<typeof route>['/x9-arr']['$get']['output']
-    type Expected = { success: true }
-    type verify = Expect<Equal<Expected, Actual>>
-  })
-
-  test('app.on(method[], path, ...10 handlers) - last handler response type should be inferred', () => {
-    const noop: MiddlewareHandler = async (_c, next) => {
-      await next()
-    }
-    const route = app.on(
-      ['GET'],
-      '/x10-arr',
-      noop,
-      noop,
-      noop,
-      noop,
-      noop,
-      noop,
-      noop,
-      noop,
-      noop,
-      (c) => c.json({ success: true })
-    )
-    type Actual = ExtractSchema<typeof route>['/x10-arr']['$get']['output']
-    type Expected = { success: true }
-    type verify = Expect<Equal<Expected, Actual>>
-  })
 })
 
 describe('TypedResponse', () => {
@@ -570,7 +523,7 @@ describe('Test types of Handler', () => {
       const foo = c.get('foo')
       expectTypeOf(foo).toEqualTypeOf<number>()
       const id = c.req.param('id')
-      expectTypeOf(id).toEqualTypeOf<string | undefined>()
+      expectTypeOf(id).toEqualTypeOf<string>()
       return c.text('Hi')
     }
     app.get('/', handler)
@@ -2034,31 +1987,6 @@ describe('Env types with validator as first middleware - test only types', () =>
       async (c) => {
         const foo = c.req.valid('json') // Error here also
         return c.json(1)
-      }
-    )
-  })
-})
-
-// https://github.com/honojs/hono/issues/4773
-describe('c.req.valid() in non-last handler after validator middleware - test only types', () => {
-  it('Should not throw a type error', () => {
-    const app = new Hono()
-    app.get(
-      '/',
-      validator('query', () => {
-        return {
-          test: 'hello',
-        }
-      }),
-      async (c, next) => {
-        const { test } = c.req.valid('query')
-        expectTypeOf(test).toEqualTypeOf<string>()
-        await next()
-      },
-      async (c) => {
-        const { test } = c.req.valid('query')
-        expectTypeOf(test).toEqualTypeOf<string>()
-        return c.json({ ok: true })
       }
     )
   })

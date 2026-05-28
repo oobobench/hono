@@ -7,12 +7,7 @@ import { PERMALINK } from '../constants'
 import { useContext } from '../context'
 import type { IntrinsicElements } from '../intrinsic-elements'
 import type { FC, PropsWithChildren } from '../types'
-import {
-  dataPrecedenceAttr,
-  deDupeKeyMap,
-  isStylesheetLinkWithPrecedence,
-  shouldDeDupeByKey,
-} from './common'
+import { dataPrecedenceAttr, deDupeKeyMap } from './common'
 
 const metaTagMap: WeakMap<
   object,
@@ -35,15 +30,8 @@ const insertIntoHead: (
 
     let duped = false
     const deDupeKeys = deDupeKeyMap[tagName]
-    const deDupeByKey = shouldDeDupeByKey(tagName, precedence !== undefined)
-    if (deDupeByKey) {
+    if (deDupeKeys.length > 0) {
       LOOP: for (const [, tagProps] of tags) {
-        if (
-          tagName === 'link' &&
-          !(tagProps.rel === 'stylesheet' && tagProps[dataPrecedenceAttr] !== undefined)
-        ) {
-          continue
-        }
         for (const key of deDupeKeys) {
           if ((tagProps?.[key] ?? null) === props?.[key]) {
             duped = true
@@ -55,7 +43,7 @@ const insertIntoHead: (
 
     if (duped) {
       buffer[0] = buffer[0].replaceAll(tag, '')
-    } else if (deDupeByKey || tagName === 'link') {
+    } else if (deDupeKeys.length > 0) {
       tags.push([tag, props, precedence])
     } else {
       tags.unshift([tag, props, precedence])
@@ -63,24 +51,21 @@ const insertIntoHead: (
 
     if (buffer[0].indexOf('</head>') !== -1) {
       let insertTags
-      if (tagName === 'link' || precedence !== undefined) {
+      if (precedence === undefined) {
+        insertTags = tags.map(([tag]) => tag)
+      } else {
         const precedences: string[] = []
         insertTags = tags
-          .map(([tag, , tagPrecedence], index) => {
-            if (tagPrecedence === undefined) {
-              return [tag, Number.MAX_SAFE_INTEGER, index] as [string, number, number]
-            }
-            let order = precedences.indexOf(tagPrecedence as string)
+          .map(([tag, , precedence]) => {
+            let order = precedences.indexOf(precedence as string)
             if (order === -1) {
-              precedences.push(tagPrecedence as string)
+              precedences.push(precedence as string)
               order = precedences.length - 1
             }
-            return [tag, order, index] as [string, number, number]
+            return [tag, order] as [string, number]
           })
-          .sort((a, b) => a[1] - b[1] || a[2] - b[2])
+          .sort((a, b) => a[1] - b[1])
           .map(([tag]) => tag)
-      } else {
-        insertTags = tags.map(([tag]) => tag)
       }
 
       insertTags.forEach((tag) => {
@@ -98,6 +83,7 @@ const documentMetadataTag = (tag: string, children: Child, props: Props, sort: b
     return returnWithoutSpecialBehavior(tag, children, props)
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let { precedence, blocking, ...restProps } = props
   precedence = sort ? (precedence ?? '') : undefined
   if (sort) {
@@ -166,7 +152,7 @@ export const link: FC<PropsWithChildren<IntrinsicElements['link']>> = ({ childre
   ) {
     return returnWithoutSpecialBehavior('link', children, props)
   }
-  return documentMetadataTag('link', children, props, isStylesheetLinkWithPrecedence(props))
+  return documentMetadataTag('link', children, props, 'precedence' in props)
 }
 export const meta: FC<PropsWithChildren> = ({ children, ...props }) => {
   const nameSpaceContext = getNameSpaceContext()

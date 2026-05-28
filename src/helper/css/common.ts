@@ -49,29 +49,6 @@ const toHash = (str: string): string => {
   return 'css-' + out
 }
 
-const normalizeLabel = (label: string): string => {
-  return label.trim().replace(/\s+/g, '-')
-}
-
-const isValidClassName = (name: string): boolean => /^-?[_a-zA-Z][_a-zA-Z0-9-]*$/.test(name)
-
-// CSS-wide keywords that are invalid as @keyframes names per the spec
-const RESERVED_KEYFRAME_NAMES = new Set([
-  'default',
-  'inherit',
-  'initial',
-  'none',
-  'revert',
-  'revert-layer',
-  'unset',
-])
-const isValidKeyframeName = (name: string): boolean =>
-  isValidClassName(name) && !RESERVED_KEYFRAME_NAMES.has(name.toLowerCase())
-
-const defaultOnInvalidSlug = (slug: string) => {
-  console.warn(`Invalid slug: ${slug}`)
-}
-
 const cssStringReStr: string = [
   '"(?:(?:\\\\[\\s\\S]|[^"\\\\])*)"', // double quoted string
 
@@ -112,25 +89,6 @@ type CssVariableBasicType =
 type CssVariableAsyncType = Promise<CssVariableBasicType>
 type CssVariableArrayType = (CssVariableBasicType | CssVariableAsyncType)[]
 export type CssVariableType = CssVariableBasicType | CssVariableAsyncType | CssVariableArrayType
-
-/**
- * A function that customizes generated CSS class names.
- *
- * @param hash - The default hash-based class name (e.g. `css-1234567890`)
- * @param label - The comment label extracted from the CSS template, may be empty.
- *   Whitespace is trimmed and inner spaces are replaced with hyphens.
- * @param styleString - The minified CSS style string
- * @returns The custom class name to use. Must be a safe CSS identifier;
- *   otherwise, the default hash is used as a fallback.
- */
-export type ClassNameSlug = (hash: string, label: string, styleString: string) => string
-
-/**
- * A callback function called when an invalid slug is returned from ClassNameSlug.
- *
- * @param slug - The invalid slug
- */
-export type OnInvalidSlug = (slug: string) => void
 
 export const buildStyleString = (
   strings: TemplateStringsArray,
@@ -196,30 +154,14 @@ export const buildStyleString = (
 
 export const cssCommon = (
   strings: TemplateStringsArray,
-  values: CssVariableType[],
-  classNameSlug?: ClassNameSlug,
-  onInvalidSlug?: OnInvalidSlug
+  values: CssVariableType[]
 ): CssClassName => {
   let [label, thisStyleString, selectors, externalClassNames] = buildStyleString(strings, values)
   const isPseudoGlobal = isPseudoGlobalSelectorRe.exec(thisStyleString)
   if (isPseudoGlobal) {
     thisStyleString = isPseudoGlobal[1]
   }
-  const hash = toHash(label + thisStyleString)
-
-  let customSlug: string | undefined
-  if (classNameSlug) {
-    const slug = classNameSlug(hash, normalizeLabel(label), thisStyleString)
-    if (slug) {
-      if (isValidClassName(slug)) {
-        customSlug = slug
-      } else {
-        ;(onInvalidSlug || defaultOnInvalidSlug)(slug)
-      }
-    }
-  }
-
-  const selector = (isPseudoGlobal ? PSEUDO_GLOBAL_SELECTOR : '') + (customSlug || hash)
+  const selector = (isPseudoGlobal ? PSEUDO_GLOBAL_SELECTOR : '') + toHash(label + thisStyleString)
   const className = (
     isPseudoGlobal ? selectors.map((s) => s[CLASS_NAME]) : [selector, ...externalClassNames]
   ).join(' ')
@@ -254,28 +196,12 @@ export const cxCommon = (
 
 export const keyframesCommon = (
   strings: TemplateStringsArray,
-  values: CssVariableType[],
-  classNameSlug?: ClassNameSlug,
-  onInvalidSlug?: OnInvalidSlug
+  ...values: CssVariableType[]
 ): CssClassName => {
   const [label, styleString] = buildStyleString(strings, values)
-  const hash = toHash(label + styleString)
-
-  let customSlug: string | undefined
-  if (classNameSlug) {
-    const slug = classNameSlug(hash, normalizeLabel(label), styleString)
-    if (slug) {
-      if (isValidKeyframeName(slug)) {
-        customSlug = slug
-      } else {
-        ;(onInvalidSlug || defaultOnInvalidSlug)(slug)
-      }
-    }
-  }
-
   return {
     [SELECTOR]: '',
-    [CLASS_NAME]: `@keyframes ${customSlug || hash}`,
+    [CLASS_NAME]: `@keyframes ${toHash(label + styleString)}`,
     [STYLE_STRING]: styleString,
     [SELECTORS]: [],
     [EXTERNAL_CLASS_NAMES]: [],
@@ -283,12 +209,7 @@ export const keyframesCommon = (
 }
 
 type ViewTransitionType = {
-  (
-    strings: TemplateStringsArray,
-    values: CssVariableType[],
-    classNameSlug?: ClassNameSlug,
-    onInvalidSlug?: OnInvalidSlug
-  ): CssClassName
+  (strings: TemplateStringsArray, values: CssVariableType[]): CssClassName
   (content: CssClassName): CssClassName
   (): CssClassName
 }
@@ -296,25 +217,19 @@ type ViewTransitionType = {
 let viewTransitionNameIndex = 0
 export const viewTransitionCommon: ViewTransitionType = ((
   strings: TemplateStringsArray | CssClassName | undefined,
-  values: CssVariableType[],
-  classNameSlug?: ClassNameSlug,
-  onInvalidSlug?: OnInvalidSlug
+  values: CssVariableType[]
 ): CssClassName => {
   if (!strings) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     strings = [`/* h-v-t ${viewTransitionNameIndex++} */`] as any
   }
   const content = Array.isArray(strings)
-    ? cssCommon(strings as TemplateStringsArray, values, classNameSlug, onInvalidSlug)
+    ? cssCommon(strings as TemplateStringsArray, values)
     : (strings as CssClassName)
 
   const transitionName = content[CLASS_NAME]
-  const res = cssCommon(
-    ['view-transition-name:', ''] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
-    [transitionName],
-    classNameSlug,
-    onInvalidSlug
-  )
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const res = cssCommon(['view-transition-name:', ''] as any, [transitionName])
 
   content[CLASS_NAME] = PSEUDO_GLOBAL_SELECTOR + content[CLASS_NAME]
   content[STYLE_STRING] = content[STYLE_STRING].replace(

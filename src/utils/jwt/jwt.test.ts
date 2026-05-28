@@ -2,7 +2,6 @@
 import { vi } from 'vitest'
 import { encodeBase64, encodeBase64Url } from '../encode'
 import { AlgorithmTypes } from './jwa'
-import type { HonoJsonWebKey } from './jws'
 import { signing } from './jws'
 import * as JWT from './jwt'
 import { verifyWithJwks } from './jwt'
@@ -1293,63 +1292,6 @@ describe('verifyWithJwks algorithm whitelist', () => {
   })
 })
 
-describe('verifyWithJwks key handling', () => {
-  it('Should not mutate provided keys when JWKS is fetched repeatedly', async () => {
-    const localKeys: HonoJsonWebKey[] = [
-      {
-        kty: 'RSA',
-        kid: 'local-key',
-        alg: 'RS256',
-        e: 'AQAB',
-        n: 'sXchAZo4YqB7f1_g8U9RVcdpShUMHbOWcZHhGXLiCFYI8aAizI0s5momkMumZ5qX6Ch12yvDqOiiMHDLecxB2S7RMyCV2wAPOQgpdnXl16rDpD6PEw24kTx5cDIeEJD7BqXc9Ejo4kKDAdAm8YGtS-wGGyRyvE4s46HoPazTA7k',
-        use: 'sig',
-      },
-    ]
-
-    const originalKeys = structuredClone(localKeys)
-    const originalFetch = globalThis.fetch
-    const header = Buffer.from(
-      JSON.stringify({ alg: 'RS256', typ: 'JWT', kid: 'unknown-key' })
-    ).toString('base64url')
-    const payload = Buffer.from(JSON.stringify({})).toString('base64url')
-    const token = `${header}.${payload}.x`
-
-    try {
-      globalThis.fetch = (async () => {
-        return new Response(
-          JSON.stringify({
-            keys: [
-              { ...localKeys[0], kid: 'remote-key' },
-              { ...localKeys[0], kid: 'remote-key' },
-            ],
-          }),
-          { status: 200, headers: { 'content-type': 'application/json' } }
-        )
-      }) as typeof globalThis.fetch
-
-      await expect(
-        verifyWithJwks(token, {
-          keys: localKeys,
-          jwks_uri: 'https://example.invalid/.well-known/jwks.json',
-          allowedAlgorithms: ['RS256'],
-        })
-      ).rejects.toThrow(JwtTokenInvalid)
-
-      await expect(
-        verifyWithJwks(token, {
-          keys: localKeys,
-          jwks_uri: 'https://example.invalid/.well-known/jwks.json',
-          allowedAlgorithms: ['RS256'],
-        })
-      ).rejects.toThrow(JwtTokenInvalid)
-    } finally {
-      globalThis.fetch = originalFetch
-    }
-
-    expect(localKeys).toEqual(originalKeys)
-  })
-})
-
 async function exportPEMPrivateKey(key: CryptoKey): Promise<string> {
   const exported = await crypto.subtle.exportKey('pkcs8', key)
   const pem = `-----BEGIN PRIVATE KEY-----\n${encodeBase64(exported)}\n-----END PRIVATE KEY-----`
@@ -1526,50 +1468,5 @@ describe('Security: Algorithm Confusion Attack Prevention', () => {
       err = e as Error
     }
     expect(err).toBeInstanceOf(JwtAlgorithmRequired)
-  })
-})
-
-describe('JWT decode token format validation', () => {
-  it('decode should throw JwtTokenInvalid for token with 2 parts', () => {
-    const malformed = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXNzYWdlIjoiaGVsbG8ifQ'
-    expect(() => JWT.decode(malformed)).toThrow(JwtTokenInvalid)
-  })
-
-  it('decode should throw JwtTokenInvalid for token with 1 part', () => {
-    expect(() => JWT.decode('eyJhbGciOiJIUzI1NiJ9')).toThrow(JwtTokenInvalid)
-  })
-
-  it('decode should throw JwtTokenInvalid for token with 4 parts', () => {
-    const fourParts = 'a.b.c.d'
-    expect(() => JWT.decode(fourParts)).toThrow(JwtTokenInvalid)
-  })
-
-  it('decode should throw JwtTokenInvalid for empty string', () => {
-    expect(() => JWT.decode('')).toThrow(JwtTokenInvalid)
-  })
-
-  it('decodeHeader should throw JwtTokenInvalid for token with 2 parts', () => {
-    const malformed = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXNzYWdlIjoiaGVsbG8ifQ'
-    expect(() => JWT.decodeHeader(malformed)).toThrow(JwtTokenInvalid)
-  })
-
-  it('decodeHeader should throw JwtTokenInvalid for empty string', () => {
-    expect(() => JWT.decodeHeader('')).toThrow(JwtTokenInvalid)
-  })
-
-  it('decode should work for valid 3-part token', async () => {
-    const secret = 'a-secret'
-    const tok = await JWT.sign({ message: 'hello' }, secret, AlgorithmTypes.HS256)
-    const decoded = JWT.decode(tok)
-    expect(decoded.header.alg).toBe('HS256')
-    expect(decoded.payload).toEqual({ message: 'hello' })
-  })
-
-  it('decodeHeader should work for valid 3-part token', async () => {
-    const secret = 'a-secret'
-    const tok = await JWT.sign({ message: 'hello' }, secret, AlgorithmTypes.HS256)
-    const header = JWT.decodeHeader(tok)
-    expect(header.alg).toBe('HS256')
-    expect(header.typ).toBe('JWT')
   })
 })

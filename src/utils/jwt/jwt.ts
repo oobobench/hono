@@ -219,8 +219,6 @@ export const verifyWithJwks = async (
     throw new JwtAlgorithmNotAllowed(header.alg, options.allowedAlgorithms)
   }
 
-  let verifyKeys = options.keys ? [...options.keys] : undefined
-
   if (options.jwks_uri) {
     const response = await fetch(options.jwks_uri, init)
     if (!response.ok) {
@@ -233,13 +231,16 @@ export const verifyWithJwks = async (
     if (!Array.isArray(data.keys)) {
       throw new Error('invalid JWKS response. "keys" field is not an array')
     }
-    verifyKeys ??= []
-    verifyKeys.push(...(data.keys as HonoJsonWebKey[]))
-  } else if (!verifyKeys) {
+    if (options.keys) {
+      options.keys.push(...data.keys)
+    } else {
+      options.keys = data.keys
+    }
+  } else if (!options.keys) {
     throw new Error('verifyWithJwks requires options for either "keys" or "jwks_uri" or both')
   }
 
-  const matchingKey = verifyKeys.find((key) => key.kid === header.kid)
+  const matchingKey = options.keys.find((key) => key.kid === header.kid)
   if (!matchingKey) {
     throw new JwtTokenInvalid(token)
   }
@@ -256,13 +257,10 @@ export const verifyWithJwks = async (
 }
 
 export const decode = (token: string): { header: TokenHeader; payload: JWTPayload } => {
-  const parts = token.split('.')
-  if (parts.length !== 3) {
-    throw new JwtTokenInvalid(token)
-  }
   try {
-    const header = decodeJwtPart(parts[0]) as TokenHeader
-    const payload = decodeJwtPart(parts[1]) as JWTPayload
+    const [h, p] = token.split('.')
+    const header = decodeJwtPart(h) as TokenHeader
+    const payload = decodeJwtPart(p) as JWTPayload
     return {
       header,
       payload,
@@ -273,12 +271,9 @@ export const decode = (token: string): { header: TokenHeader; payload: JWTPayloa
 }
 
 export const decodeHeader = (token: string): TokenHeader => {
-  const parts = token.split('.')
-  if (parts.length !== 3) {
-    throw new JwtTokenInvalid(token)
-  }
   try {
-    return decodeJwtPart(parts[0]) as TokenHeader
+    const [h] = token.split('.')
+    return decodeJwtPart(h) as TokenHeader
   } catch {
     throw new JwtTokenInvalid(token)
   }

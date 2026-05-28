@@ -170,7 +170,7 @@ describe('Built-in SSG plugins', () => {
       const redirectApp = new Hono()
       redirectApp.get(
         '/evil',
-        () => new Response(null, { status: 301, headers: { Location: maliciousLocation } })
+        (c) => new Response(null, { status: 301, headers: { Location: maliciousLocation } })
       )
 
       await toSSG(redirectApp, fsMockLocal, { dir: './static', plugins: [redirectPlugin()] })

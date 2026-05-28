@@ -9,15 +9,10 @@ import { Context } from '../../src/context'
 import { env, getRuntimeKey } from '../../src/helper/adapter'
 import type { WSMessageReceive } from '../../src/helper/websocket'
 import { Hono } from '../../src/index'
-import type { PropsWithChildren } from '../../src/jsx'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { jsx } from '../../src/jsx'
 import { basicAuth } from '../../src/middleware/basic-auth'
 import { jwt } from '../../src/middleware/jwt'
-
-declare module '../../src/index' {
-  interface ContextRenderer {
-    (content: string | Promise<string>, head: { title: string }): Response | Promise<Response>
-  }
-}
 
 // Test just only minimal patterns.
 // Because others are tested well in Cloudflare Workers environment already.
@@ -206,7 +201,7 @@ describe('JWT Auth Middleware', () => {
 describe('JSX Middleware', () => {
   const app = new Hono()
 
-  const Layout = (props: PropsWithChildren) => {
+  const Layout = (props: { children?: string }) => {
     return <html>{props.children}</html>
   }
 
@@ -282,7 +277,7 @@ describe('toSSG function', () => {
 
   it('Should correctly generate static HTML files for Hono routes', async () => {
     const result = await toSSG(app, { dir: './static' })
-    expect(result.success).toBeTruthy()
+    expect(result.success).toBeTruly
     expect(result.error).toBeUndefined()
     expect(result.files).toBeDefined()
     afterAll(async () => {
@@ -328,7 +323,7 @@ describe('WebSockets Helper', () => {
   })
 })
 
-async function deleteDirectory(dirPath: string) {
+async function deleteDirectory(dirPath) {
   if (
     await fs
       .stat(dirPath)

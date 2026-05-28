@@ -371,7 +371,7 @@ export abstract class EventProcessor<E extends LambdaEvent> {
     return result
   }
 
-  setCookies(_event: E, res: Response, result: APIGatewayProxyResult) {
+  setCookies(event: E, res: Response, result: APIGatewayProxyResult) {
     if (res.headers.has('set-cookie')) {
       const cookies = res.headers.getSetCookie
         ? res.headers.getSetCookie()
@@ -453,7 +453,12 @@ export class EventV1Processor extends EventProcessor<APIGatewayProxyEvent> {
     }
   }
 
-  protected getCookies(_event: APIGatewayProxyEvent, _headers: Headers): void {
+  protected getCookies(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    event: APIGatewayProxyEvent,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    headers: Headers
+  ): void {
     // nop
   }
 

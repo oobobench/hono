@@ -4,10 +4,6 @@ import { Hono } from '../../src/index'
 import { basicAuth } from '../../src/middleware/basic-auth'
 import { jwt } from '../../src/middleware/jwt'
 
-declare global {
-  var __fastlyComputeNodeDefaultCrypto: boolean | undefined
-}
-
 beforeAll(() => {
   vi.stubGlobal('fastly', true)
   vi.stubGlobal('navigator', undefined)
@@ -103,7 +99,7 @@ describe('JWT Auth Middleware does not work', () => {
   // To confirm polyfill-ed or not, check __fastlyComputeNodeDefaultCrypto field is true.
   it.runIf(!globalThis.__fastlyComputeNodeDefaultCrypto)('Should throw error', () => {
     expect(() => {
-      app.use('/jwt/*', jwt({ alg: 'HS256', secret: 'secret' }))
+      app.use('/jwt/*', jwt({ secret: 'secret' }))
     }).toThrow(/`crypto.subtle.importKey` is undefined/)
   })
 })

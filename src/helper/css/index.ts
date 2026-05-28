@@ -7,12 +7,7 @@ import { raw } from '../../helper/html'
 import { DOM_RENDERER } from '../../jsx/constants'
 import { createCssJsxDomObjects } from '../../jsx/dom/css'
 import type { HtmlEscapedCallback, HtmlEscapedString } from '../../utils/html'
-import type {
-  ClassNameSlug,
-  CssClassName as CssClassNameCommon,
-  CssVariableType,
-  OnInvalidSlug,
-} from './common'
+import type { CssClassName as CssClassNameCommon, CssVariableType } from './common'
 import {
   CLASS_NAME,
   DEFAULT_STYLE_ID,
@@ -26,7 +21,6 @@ import {
   viewTransitionCommon,
 } from './common'
 export { rawCssString } from './common'
-export type { ClassNameSlug, OnInvalidSlug } from './common'
 
 type CssClassName = HtmlEscapedString & CssClassNameCommon
 
@@ -63,20 +57,8 @@ interface StyleType {
  * @experimental
  * `createCssContext` is an experimental feature.
  * The API might be changed.
- *
- * @param options.id - The ID for the style element
- * @param options.classNameSlug - Optional function to customize generated CSS class names
- * @param options.onInvalidSlug - Optional callback function called when an invalid slug is returned from ClassNameSlug
  */
-export const createCssContext = ({
-  id,
-  classNameSlug,
-  onInvalidSlug,
-}: {
-  id: Readonly<string>
-  classNameSlug?: ClassNameSlug
-  onInvalidSlug?: OnInvalidSlug
-}): DefaultContextType => {
+export const createCssContext = ({ id }: { id: Readonly<string> }): DefaultContextType => {
   const [cssJsxDomObject, StyleRenderToDom] = createCssJsxDomObjects({ id })
 
   const contextMap: WeakMap<object, usedClassNameData> = new WeakMap()
@@ -157,7 +139,7 @@ export const createCssContext = ({
   }
 
   const css: CssType = (strings, ...values) => {
-    return newCssClassNameObject(cssCommon(strings, values, classNameSlug, onInvalidSlug))
+    return newCssClassNameObject(cssCommon(strings, values))
   }
 
   const cx: CxType = (...args) => {
@@ -167,16 +149,14 @@ export const createCssContext = ({
     return css(Array(args.length).fill('') as any, ...args)
   }
 
-  const keyframes: KeyframesType = (strings, ...values) =>
-    keyframesCommon(strings, values, classNameSlug, onInvalidSlug)
+  const keyframes = keyframesCommon
 
   const viewTransition: ViewTransitionType = ((
     strings: TemplateStringsArray | Promise<string> | undefined,
     ...values: CssVariableType[]
   ) => {
-    return newCssClassNameObject(
-      viewTransitionCommon(strings as any, values, classNameSlug, onInvalidSlug) // eslint-disable-line @typescript-eslint/no-explicit-any
-    )
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return newCssClassNameObject(viewTransitionCommon(strings as any, values))
   }) as ViewTransitionType
 
   const Style: StyleType = ({ children, nonce } = {}) =>

@@ -1,23 +1,27 @@
 import { vi } from 'vitest'
-import type { LambdaEvent } from '../../src/adapter/aws-lambda/handler'
+import type {
+  APIGatewayProxyEvent,
+  APIGatewayProxyEventV2,
+  LambdaFunctionUrlEvent,
+} from '../../src/adapter/aws-lambda/handler'
 import type { LambdaContext } from '../../src/adapter/aws-lambda/types'
 
 type StreamifyResponseHandler = (
   handlerFunc: (
-    event: LambdaEvent,
+    event: APIGatewayProxyEvent | APIGatewayProxyEventV2 | LambdaFunctionUrlEvent,
     responseStream: NodeJS.WritableStream,
     context: LambdaContext
   ) => Promise<void>
-) => (event: LambdaEvent, context: LambdaContext) => Promise<NodeJS.WritableStream>
+) => (event: APIGatewayProxyEvent, context: LambdaContext) => Promise<NodeJS.WritableStream>
 
 const mockStreamifyResponse: StreamifyResponseHandler = (handlerFunc) => {
   return async (event, context) => {
     const mockWritableStream: NodeJS.WritableStream = new (require('stream').Writable)({
-      write(chunk: Buffer, _encoding: string, callback: () => void) {
+      write(chunk, encoding, callback) {
         console.log('Writing chunk:', chunk.toString())
         callback()
       },
-      final(callback: () => void) {
+      final(callback) {
         console.log('Finalizing stream.')
         callback()
       },

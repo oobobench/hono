@@ -208,10 +208,6 @@ const handleParsingNestedValues = (
   key: string,
   value: BodyDataValue<Partial<ParseBodyOptions>>
 ): void => {
-  if (/(?:^|\.)__proto__\./.test(key)) {
-    return
-  }
-
   let nestedForm = form
   const keys = key.split('.')
 

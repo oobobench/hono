@@ -563,40 +563,6 @@ describe('saveContentToFile function', () => {
     expect(fsMock.writeFile).toHaveBeenCalledWith('static/html.htm', yamlContent) // extensionMap
     expect(fsMock.writeFile).toHaveBeenCalledWith('static/html.html', yamlContent) // default + extensionMap
   })
-
-  it('should reject writing files outside outDir via path traversal', async () => {
-    await expect(
-      saveContentToFile(
-        Promise.resolve({
-          routePath: '/../pwned',
-          content: 'owned',
-          mimeType: 'text/html',
-        }),
-        fsMock,
-        './static'
-      )
-    ).rejects.toThrow('Path traversal detected')
-
-    expect(fsMock.mkdir).not.toHaveBeenCalled()
-    expect(fsMock.writeFile).not.toHaveBeenCalled()
-  })
-
-  it('should reject paths that only partially match outDir name', async () => {
-    await expect(
-      saveContentToFile(
-        Promise.resolve({
-          routePath: '/../static-evil/pwned',
-          content: 'owned',
-          mimeType: 'text/html',
-        }),
-        fsMock,
-        './static'
-      )
-    ).rejects.toThrow('Path traversal detected')
-
-    expect(fsMock.mkdir).not.toHaveBeenCalled()
-    expect(fsMock.writeFile).not.toHaveBeenCalled()
-  })
 })
 
 describe('Dynamic route handling', () => {
@@ -678,30 +644,6 @@ describe('disableSSG/onlySSG middlewares', () => {
   it('Should return 404 response if onlySSG() is set', async () => {
     const res = await app.request('/static-page')
     expect(res.status).toBe(404)
-  })
-})
-
-describe('isSSGContext with disableSSG', () => {
-  it('Should work correctly when used together', async () => {
-    const app = new Hono()
-
-    app.use('*', async (c, next) => {
-      if (!isSSGContext(c)) {
-        return next()
-      }
-      await next()
-    })
-    app.get('/guarded', disableSSG(), (c) => c.html('<h1>should be skipped</h1>'))
-    app.get('/page', (c) => c.html('<h1>hello</h1>'))
-
-    const fsMock: FileSystemModule = {
-      writeFile: vi.fn(() => Promise.resolve()),
-      mkdir: vi.fn(() => Promise.resolve()),
-    }
-
-    await expect(toSSG(app, fsMock, { dir: './static' })).resolves.toBeDefined()
-    expect(fsMock.writeFile).toHaveBeenCalledWith('static/page.html', expect.any(String))
-    expect(fsMock.writeFile).not.toHaveBeenCalledWith('static/guarded.html', expect.any(String))
   })
 })
 

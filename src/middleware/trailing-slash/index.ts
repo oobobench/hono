@@ -82,22 +82,6 @@ type AppendTrailingSlashOptions = {
    * @default false
    */
   alwaysRedirect?: boolean
-  /**
-   * A function that determines whether to skip the redirect for a given path.
-   * If the function returns `true`, the redirect will be skipped.
-   * @param path - The request path
-   * @returns `true` to skip the redirect
-   *
-   * @example
-   * ```ts
-   * // Skip redirect for paths with file extensions
-   * app.use(appendTrailingSlash({
-   *   alwaysRedirect: true,
-   *   skip: (path) => /\.\w+$/.test(path),
-   * }))
-   * ```
-   */
-  skip?: (path: string) => boolean
 }
 
 /**
@@ -128,11 +112,7 @@ type AppendTrailingSlashOptions = {
 export const appendTrailingSlash = (options?: AppendTrailingSlashOptions): MiddlewareHandler => {
   return async function appendTrailingSlash(c, next) {
     if (options?.alwaysRedirect) {
-      if (
-        (c.req.method === 'GET' || c.req.method === 'HEAD') &&
-        c.req.path.at(-1) !== '/' &&
-        !options.skip?.(c.req.path)
-      ) {
+      if ((c.req.method === 'GET' || c.req.method === 'HEAD') && c.req.path.at(-1) !== '/') {
         const url = new URL(c.req.url)
         url.pathname += '/'
 
@@ -146,8 +126,7 @@ export const appendTrailingSlash = (options?: AppendTrailingSlashOptions): Middl
       !options?.alwaysRedirect &&
       c.res.status === 404 &&
       (c.req.method === 'GET' || c.req.method === 'HEAD') &&
-      c.req.path.at(-1) !== '/' &&
-      !options?.skip?.(c.req.path)
+      c.req.path.at(-1) !== '/'
     ) {
       const url = new URL(c.req.url)
       url.pathname += '/'
