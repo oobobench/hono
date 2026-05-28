@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "4364cf0467a4c6c2bb7ef91a4f43c643231028d6",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008570,
+  "message": "fix(types): remove DOM type dependencies from ClientResponse and request method (#4768)",
+  "files_changed": [
+    "src/client/types.ts",
+    "src/hono-base.ts"
+  ],
+  "added": 5,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "src/client/types.ts",
+      "added": 4,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/hono-base.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 5,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
