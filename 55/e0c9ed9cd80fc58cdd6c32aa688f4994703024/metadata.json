@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "55e0c9ed9cd80fc58cdd6c32aa688f4994703024",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008783,
+  "message": "fix(cookie): return the first cookie when there are multiple cookies with the same name (#4922)",
+  "files_changed": [
+    "src/utils/cookie.test.ts",
+    "src/utils/cookie.ts"
+  ],
+  "added": 59,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "src/utils/cookie.test.ts",
+      "added": 52,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.ts",
+      "added": 7,
+      "deleted": 3,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 59,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
