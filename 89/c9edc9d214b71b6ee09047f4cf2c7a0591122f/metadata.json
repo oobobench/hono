@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "89c9edc9d214b71b6ee09047f4cf2c7a0591122f",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008762,
+  "message": "fix(cors): make origin optional in CORSOptions (#4905)",
+  "files_changed": [
+    "src/middleware/cors/index.test.ts",
+    "src/middleware/cors/index.ts"
+  ],
+  "added": 21,
+  "deleted": 6,
+  "file_changes": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "added": 18,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "added": 3,
+      "deleted": 6,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 21,
+  "human_deleted": 6,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
