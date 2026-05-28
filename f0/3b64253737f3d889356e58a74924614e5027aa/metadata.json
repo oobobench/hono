@@ -1,0 +1,64 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "f03b64253737f3d889356e58a74924614e5027aa",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008628,
+  "message": "fix(jsx): align link hoisting and dedupe with React 19 (#4792)",
+  "files_changed": [
+    "src/jsx/dom/intrinsic-element/components.test.tsx",
+    "src/jsx/dom/intrinsic-element/components.ts",
+    "src/jsx/intrinsic-element/common.ts",
+    "src/jsx/intrinsic-element/components.test.tsx",
+    "src/jsx/intrinsic-element/components.ts"
+  ],
+  "added": 575,
+  "deleted": 23,
+  "file_changes": [
+    {
+      "path": "src/jsx/dom/intrinsic-element/components.test.tsx",
+      "added": 298,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/intrinsic-element/components.ts",
+      "added": 51,
+      "deleted": 11,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/common.ts",
+      "added": 12,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/components.test.tsx",
+      "added": 187,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/intrinsic-element/components.ts",
+      "added": 27,
+      "deleted": 12,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 575,
+  "human_deleted": 23,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
