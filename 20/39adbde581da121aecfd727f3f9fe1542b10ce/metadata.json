@@ -1,0 +1,50 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "2039adbde581da121aecfd727f3f9fe1542b10ce",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008862,
+  "message": "feat(compress): add contentTypeFilter option and `COMPRESSIBLE_CONTENT_TYPE_REGEX` re-export (#4961)",
+  "files_changed": [
+    "docs/CONTRIBUTING.md",
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 77,
+  "deleted": 5,
+  "file_changes": [
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "added": 9,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 44,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 24,
+      "deleted": 5,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 77,
+  "human_deleted": 5,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
