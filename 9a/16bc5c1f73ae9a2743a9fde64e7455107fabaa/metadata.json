@@ -1,0 +1,106 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "9a16bc5c1f73ae9a2743a9fde64e7455107fabaa",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008736,
+  "message": "fix(jwt): support single-line PEM keys (#4889)",
+  "files_changed": [
+    "package.json",
+    "src/jsx/base.ts",
+    "src/jsx/dom/index.test.tsx",
+    "src/jsx/dom/render.ts",
+    "src/jsx/index.test.tsx",
+    "src/jsx/jsx-runtime.test.tsx",
+    "src/jsx/jsx-runtime.ts",
+    "src/jsx/utils.test.ts",
+    "src/jsx/utils.ts",
+    "src/utils/jwt/jws.ts",
+    "src/utils/jwt/jwt.test.ts"
+  ],
+  "added": 322,
+  "deleted": 14,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/base.ts",
+      "added": 4,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/index.test.tsx",
+      "added": 76,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/render.ts",
+      "added": 27,
+      "deleted": 9,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/index.test.tsx",
+      "added": 79,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/jsx-runtime.test.tsx",
+      "added": 24,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/jsx-runtime.ts",
+      "added": 4,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.test.ts",
+      "added": 46,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.ts",
+      "added": 27,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jws.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/jwt/jwt.test.ts",
+      "added": 33,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 322,
+  "human_deleted": 14,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
