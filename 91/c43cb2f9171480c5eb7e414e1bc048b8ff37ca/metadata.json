@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "91c43cb2f9171480c5eb7e414e1bc048b8ff37ca",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008756,
+  "message": "fix(ssg): add `atom+xml` and `rss+xml` to `defaultExtensionMap` (#4899)",
+  "files_changed": [
+    "src/helper/ssg/ssg.test.tsx",
+    "src/helper/ssg/ssg.ts"
+  ],
+  "added": 18,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/helper/ssg/ssg.test.tsx",
+      "added": 16,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/ssg/ssg.ts",
+      "added": 2,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 18,
+  "human_deleted": 0,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
