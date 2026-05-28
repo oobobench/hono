@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "09d6937db92d08aa982252a7a15af71ba2553319",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008723,
+  "message": "feat(cache): add `onCacheNotAvailable` option (#4876)",
+  "files_changed": [
+    "src/middleware/cache/index.test.ts",
+    "src/middleware/cache/index.ts"
+  ],
+  "added": 40,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "added": 31,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "added": 9,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 40,
+  "human_deleted": 1,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
