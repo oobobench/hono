@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "99409bcd81a0e2048095c1f8b423b43c9a50e268",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008838,
+  "message": "fix(deno): echo negotiated WebSocket subprotocol in upgrade response (#4955)",
+  "files_changed": [
+    "src/adapter/deno/websocket.test.ts",
+    "src/adapter/deno/websocket.ts"
+  ],
+  "added": 78,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/adapter/deno/websocket.test.ts",
+      "added": 69,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/deno/websocket.ts",
+      "added": 9,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 78,
+  "human_deleted": 1,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
