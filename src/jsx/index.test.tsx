@@ -3,7 +3,16 @@
 import { html } from '../helper/html'
 import { Hono } from '../hono'
 import { Suspense, renderToReadableStream } from './streaming'
-import DefaultExport, { Fragment, StrictMode, createContext, memo, useContext, version } from '.'
+import DefaultExport, {
+  Fragment,
+  StrictMode,
+  createContext,
+  createElement,
+  jsx,
+  memo,
+  useContext,
+  version,
+} from '.'
 import type { Context, FC, PropsWithChildren } from '.'
 
 interface SiteData {
@@ -168,6 +177,48 @@ describe('render to string', () => {
   it('Empty elements with children are rended with children and closing tag', () => {
     const template = <link>https://example.com</link>
     expect(template.toString()).toBe('<link>https://example.com</link>')
+  })
+
+  describe('programmatic tag names', () => {
+    it('Should throw when jsx() receives a tag name that can break out of the HTML context', () => {
+      const payloads = [
+        '><script>alert(1)</script><x',
+        'div onmouseover="alert(1)" x=',
+        'div></div><img src=x onerror=alert(1)><div',
+        '!--',
+        '!DOCTYPE',
+        '?xml',
+      ]
+
+      for (const tag of payloads) {
+        expect(() => jsx(tag, {}, 'hello')).toThrow(`Invalid JSX tag name: ${tag}`)
+      }
+    })
+
+    it('Should throw when createElement() receives a tag name that can break out of the HTML context', () => {
+      expect(() => createElement('div onmouseover="alert(1)" x=', {}, 'hello')).toThrow(
+        'Invalid JSX tag name: div onmouseover="alert(1)" x='
+      )
+    })
+
+    it('Should throw when jsx() receives an invalid non-primitive tag name', () => {
+      expect(() => jsx(new String('div') as never, {}, 'hello')).toThrow(
+        'Invalid JSX tag name: div'
+      )
+      expect(() =>
+        jsx({ toString: () => 'div onmouseover="alert(1)" x=' } as never, {}, 'hello')
+      ).toThrow('Invalid JSX tag name: div onmouseover="alert(1)" x=')
+    })
+
+    it('Should allow compatible custom and namespaced tag names', () => {
+      expect(jsx('custom-element', {}, 'hello').toString()).toBe(
+        '<custom-element>hello</custom-element>'
+      )
+      expect(jsx('foo:bar', {}, 'hello').toString()).toBe('<foo:bar>hello</foo:bar>')
+      expect(jsx('x.foo', {}, 'hello').toString()).toBe('<x.foo>hello</x.foo>')
+      expect(jsx('x_bar', {}, 'hello').toString()).toBe('<x_bar>hello</x_bar>')
+      expect(jsx('é', {}, 'hello').toString()).toBe('<é>hello</é>')
+    })
   })
 
   it('Props value is null', () => {
@@ -744,6 +795,13 @@ describe('SVG', () => {
       </svg>
     )
     expect(template.toString()).toBe('<svg><g viewBox="0 0 10 10"></g></svg>')
+  })
+
+  it('should normalize kebab-case attributes on the <svg> root element', () => {
+    const template = <svg {...{ strokeWidth: '1.5', strokeLinecap: 'round' }} viewBox='0 0 16 16' />
+    expect(template.toString()).toBe(
+      '<svg stroke-width="1.5" stroke-linecap="round" viewBox="0 0 16 16"></svg>'
+    )
   })
 
   describe('attribute', () => {

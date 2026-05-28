@@ -1,4 +1,9 @@
-import { isValidAttributeName, normalizeIntrinsicElementKey, styleObjectForEach } from './utils'
+import {
+  isValidAttributeName,
+  isValidTagName,
+  normalizeIntrinsicElementKey,
+  styleObjectForEach,
+} from './utils'
 
 describe('normalizeIntrinsicElementKey', () => {
   test.each`
@@ -19,17 +24,17 @@ describe('normalizeIntrinsicElementKey', () => {
 
 describe('isValidAttributeName', () => {
   test.each`
-    name            | expected
-    ${'class'}      | ${true}
-    ${'id'}         | ${true}
-    ${'href'}       | ${true}
-    ${'data-foo'}   | ${true}
-    ${'aria-label'} | ${true}
-    ${'onclick'}    | ${true}
-    ${'viewBox'}    | ${true}
-    ${'xml:lang'}   | ${true}
-  `('should return $expected for valid name "$name"', ({ name, expected }) => {
-    expect(isValidAttributeName(name)).toBe(expected)
+    name
+    ${'class'}
+    ${'id'}
+    ${'href'}
+    ${'data-foo'}
+    ${'aria-label'}
+    ${'onclick'}
+    ${'viewBox'}
+    ${'xml:lang'}
+  `('should return true for valid name "$name"', ({ name }) => {
+    expect(isValidAttributeName(name)).toBe(true)
   })
 
   test.each`
@@ -59,6 +64,65 @@ describe('isValidAttributeName', () => {
     ${'é'}          | ${'non-ascii'}
   `('should return true for valid "$description" names', ({ name }) => {
     expect(isValidAttributeName(name)).toBe(true)
+  })
+
+  it('should keep validating names after the valid attribute name cache is reset', () => {
+    for (let i = 0; i < 1025; i++) {
+      expect(isValidAttributeName(`data-k${i}`)).toBe(true)
+    }
+
+    expect(isValidAttributeName('class')).toBe(true)
+    expect(isValidAttributeName('" onfocus="alert(1)')).toBe(false)
+  })
+})
+
+describe('isValidTagName', () => {
+  test.each`
+    name
+    ${''}
+    ${'div'}
+    ${'h1'}
+    ${'custom-element'}
+    ${'clipPath'}
+    ${'foo:bar'}
+    ${'x.foo'}
+    ${'x_bar'}
+    ${'é'}
+  `('should return true for valid tag name "$name"', ({ name }) => {
+    expect(isValidTagName(name)).toBe(true)
+  })
+
+  test.each`
+    name                             | description
+    ${'foo bar'}                     | ${'space'}
+    ${'foo\nbar'}                    | ${'newline'}
+    ${'" onfocus="alert(1)'}         | ${'double quote'}
+    ${"' onfocus='alert(1)"}         | ${'single quote'}
+    ${'foo<bar'}                     | ${'less than'}
+    ${'"><script>alert(1)</script>'} | ${'greater than'}
+    ${'foo=bar'}                     | ${'equals sign'}
+    ${'foo/bar'}                     | ${'slash'}
+    ${'foo\\bar'}                    | ${'backslash'}
+    ${'foo`bar'}                     | ${'backtick'}
+    ${'a\x00b'}                      | ${'null byte'}
+    ${'a\x1fb'}                      | ${'control character'}
+    ${'a\x7fb'}                      | ${'DEL character'}
+    ${'!'}                           | ${'single bang'}
+    ${'!--'}                         | ${'parser-control bang prefix'}
+    ${'!DOCTYPE'}                    | ${'doctype-like name'}
+    ${'?'}                           | ${'single question mark'}
+    ${'?xml'}                        | ${'processing instruction'}
+  `('should return false for "$description"', ({ name }) => {
+    expect(isValidTagName(name)).toBe(false)
+  })
+
+  it('should keep validating names after the valid tag name cache is reset', () => {
+    for (let i = 0; i < 257; i++) {
+      expect(isValidTagName(`custom-${i}`)).toBe(true)
+    }
+
+    expect(isValidTagName('div')).toBe(true)
+    expect(isValidTagName('div onmouseover="alert(1)"')).toBe(false)
   })
 })
 

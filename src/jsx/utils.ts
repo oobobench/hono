@@ -13,7 +13,43 @@ export const normalizeIntrinsicElementKey = (key: string): string =>
 
 // eslint-disable-next-line no-control-regex
 const invalidAttributeNameCharRe = /[\s"'<>/=`\\\x00-\x1f\x7f-\x9f]/
+const validAttributeNameCache = new Set<string>()
+const validAttributeNameCacheMax = 1024
+// reject HTML parser-control tag starters ('!' for comments/doctype, '?' for
+// processing instructions) in addition to the shared invalid-char set
+// eslint-disable-next-line no-control-regex
+const invalidTagNameCharRe = /^[!?]|[\s"'<>/=`\\\x00-\x1f\x7f-\x9f]/
+const validTagNameCache = new Set<unknown>()
+const validTagNameCacheMax = 256
+
+const cacheValidName = (cache: Set<unknown>, max: number, name: string): void => {
+  if (cache.size >= max) {
+    cache.clear()
+  }
+  cache.add(name)
+}
+
+export const isValidTagName = (name: unknown): name is string => {
+  if (validTagNameCache.has(name)) {
+    return true
+  }
+  if (typeof name !== 'string') {
+    return false
+  }
+  if (name.length === 0) {
+    return true
+  }
+  if (invalidTagNameCharRe.test(name)) {
+    return false
+  }
+  cacheValidName(validTagNameCache, validTagNameCacheMax, name)
+  return true
+}
+
 export const isValidAttributeName = (name: string): boolean => {
+  if (validAttributeNameCache.has(name)) {
+    return true
+  }
   const len = name.length
   if (len === 0) {
     return false
@@ -32,9 +68,15 @@ export const isValidAttributeName = (name: string): boolean => {
       )
     ) {
       // non-fast-path character found — fall back to regex for the full name
-      return !invalidAttributeNameCharRe.test(name)
+      if (!invalidAttributeNameCharRe.test(name)) {
+        cacheValidName(validAttributeNameCache, validAttributeNameCacheMax, name)
+        return true
+      } else {
+        return false
+      }
     }
   }
+  cacheValidName(validAttributeNameCache, validAttributeNameCacheMax, name)
   return true
 }
 
