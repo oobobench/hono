@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "69975ed48bf460326abd1e24ed380a02b88cabe4",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008869,
+  "message": "fix(utils/ipaddr): do not compress a single 0 group to `::` (#4971)",
+  "files_changed": [
+    "src/utils/ipaddr.test.ts",
+    "src/utils/ipaddr.ts"
+  ],
+  "added": 6,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/utils/ipaddr.test.ts",
+      "added": 4,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/ipaddr.ts",
+      "added": 2,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 6,
+  "human_deleted": 1,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
