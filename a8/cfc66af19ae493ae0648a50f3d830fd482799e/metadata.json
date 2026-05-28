@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "a8cfc66af19ae493ae0648a50f3d830fd482799e",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008640,
+  "message": "fix(lambda-edge): avoid callback handler deprecation on NODEJS_24_X (#4782)",
+  "files_changed": [
+    "src/adapter/lambda-edge/handler.test.ts",
+    "src/adapter/lambda-edge/handler.ts"
+  ],
+  "added": 36,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "src/adapter/lambda-edge/handler.test.ts",
+      "added": 34,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/adapter/lambda-edge/handler.ts",
+      "added": 2,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 36,
+  "human_deleted": 2,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
