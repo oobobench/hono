@@ -1,0 +1,78 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "42d1299889eff34f2017efc252ee1b569d7eeb67",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008704,
+  "message": "feat(css): add classNameSlug option to createCssContext (#4834)",
+  "files_changed": [
+    "package.json",
+    "src/helper/css/common.ts",
+    "src/helper/css/index.test.tsx",
+    "src/helper/css/index.ts",
+    "src/jsx/dom/css.test.tsx",
+    "src/jsx/dom/css.ts",
+    "src/middleware/ip-restriction/index.ts"
+  ],
+  "added": 474,
+  "deleted": 24,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/common.ts",
+      "added": 94,
+      "deleted": 9,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/index.test.tsx",
+      "added": 262,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/css/index.ts",
+      "added": 26,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/css.test.tsx",
+      "added": 28,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/css.ts",
+      "added": 25,
+      "deleted": 6,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "added": 38,
+      "deleted": 2,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 474,
+  "human_deleted": 24,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
