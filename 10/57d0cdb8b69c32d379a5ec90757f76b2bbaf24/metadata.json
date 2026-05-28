@@ -1,0 +1,50 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "1057d0cdb8b69c32d379a5ec90757f76b2bbaf24",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008665,
+  "message": "feat(client): add `PickResponseByStatusCode` type (#4791)",
+  "files_changed": [
+    "src/client/client.test.ts",
+    "src/client/index.ts",
+    "src/client/types.ts"
+  ],
+  "added": 130,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/client/client.test.ts",
+      "added": 99,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/index.ts",
+      "added": 1,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/client/types.ts",
+      "added": 30,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 130,
+  "human_deleted": 0,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
