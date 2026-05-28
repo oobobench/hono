@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "162ef36bba94a2aa624e1b0752f8fb83184ad66e",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008790,
+  "message": "feat(bearer-auth): make bearerAuth generic for typed context in verifyToken (#4913)",
+  "files_changed": [
+    "src/middleware/bearer-auth/index.test.ts",
+    "src/middleware/bearer-auth/index.ts"
+  ],
+  "added": 33,
+  "deleted": 5,
+  "file_changes": [
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "added": 25,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "added": 8,
+      "deleted": 5,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 33,
+  "human_deleted": 5,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
