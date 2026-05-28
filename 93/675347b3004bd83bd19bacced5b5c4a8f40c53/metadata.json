@@ -1,0 +1,162 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "93675347b3004bd83bd19bacced5b5c4a8f40c53",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008825,
+  "message": "fix(mime): specify charset parameter per MIME type instead of mechanical detection (#4912)",
+  "files_changed": [
+    ".vitest.config/setup-vitest.ts",
+    "bun.lock",
+    "package.json",
+    "src/hono-base.ts",
+    "src/hono.test.ts",
+    "src/middleware/cache/index.test.ts",
+    "src/middleware/ip-restriction/index.test.ts",
+    "src/middleware/ip-restriction/index.ts",
+    "src/middleware/jwk/index.test.ts",
+    "src/middleware/jwk/jwk.ts",
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/jwt.ts",
+    "src/utils/cookie.test.ts",
+    "src/utils/cookie.ts",
+    "src/utils/ipaddr.test.ts",
+    "src/utils/ipaddr.ts",
+    "src/utils/mime.test.ts",
+    "src/utils/mime.ts",
+    "vitest.config.ts"
+  ],
+  "added": 843,
+  "deleted": 226,
+  "file_changes": [
+    {
+      "path": ".vitest.config/setup-vitest.ts",
+      "added": 0,
+      "deleted": 47,
+      "attribution": "human"
+    },
+    {
+      "path": "bun.lock",
+      "added": 133,
+      "deleted": 79,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 3,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "src/hono-base.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/hono.test.ts",
+      "added": 34,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "added": 33,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.test.ts",
+      "added": 76,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "added": 60,
+      "deleted": 24,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwk/index.test.ts",
+      "added": 101,
+      "deleted": 18,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwk/jwk.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "added": 66,
+      "deleted": 8,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/jwt/jwt.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.test.ts",
+      "added": 23,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/ipaddr.test.ts",
+      "added": 40,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/ipaddr.ts",
+      "added": 219,
+      "deleted": 10,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/mime.test.ts",
+      "added": 21,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/mime.ts",
+      "added": 15,
+      "deleted": 17,
+      "attribution": "human"
+    },
+    {
+      "path": "vitest.config.ts",
+      "added": 15,
+      "deleted": 10,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 843,
+  "human_deleted": 226,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
