@@ -1,0 +1,85 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "8f3958a65646e439aee83e7a5296b05654bcf1b0",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008603,
+  "message": "fix(request): return `string | undefined` from param() when path type is any (#4723)",
+  "files_changed": [
+    "package.json",
+    "src/helper/streaming/sse.test.tsx",
+    "src/helper/streaming/sse.ts",
+    "src/request.test.ts",
+    "src/request.ts",
+    "src/types.test.ts",
+    "src/utils/cookie.test.ts",
+    "src/utils/cookie.ts"
+  ],
+  "added": 142,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/streaming/sse.test.tsx",
+      "added": 80,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/helper/streaming/sse.ts",
+      "added": 6,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.test.ts",
+      "added": 21,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.ts",
+      "added": 3,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/types.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.test.ts",
+      "added": 24,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/cookie.ts",
+      "added": 6,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 142,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
