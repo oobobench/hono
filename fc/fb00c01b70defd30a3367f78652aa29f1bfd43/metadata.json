@@ -1,0 +1,64 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "fcfb00c01b70defd30a3367f78652aa29f1bfd43",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008808,
+  "message": "fix(stream): upgrade `@hono/node-server` to v2 and fix abort handling (#4940)",
+  "files_changed": [
+    ".github/workflows/ci.yml",
+    "bun.lock",
+    "package.json",
+    "runtime-tests/node/index.test.ts",
+    "src/utils/stream.ts"
+  ],
+  "added": 13,
+  "deleted": 15,
+  "file_changes": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "bun.lock",
+      "added": 3,
+      "deleted": 3,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "runtime-tests/node/index.test.ts",
+      "added": 4,
+      "deleted": 8,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/stream.ts",
+      "added": 4,
+      "deleted": 2,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 13,
+  "human_deleted": 15,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
