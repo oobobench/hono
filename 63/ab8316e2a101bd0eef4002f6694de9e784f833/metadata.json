@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "63ab8316e2a101bd0eef4002f6694de9e784f833",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008796,
+  "message": "feat(cache): key cache entries by configured vary headers (#4915)",
+  "files_changed": [
+    "src/middleware/cache/index.test.ts",
+    "src/middleware/cache/index.ts"
+  ],
+  "added": 227,
+  "deleted": 41,
+  "file_changes": [
+    {
+      "path": "src/middleware/cache/index.test.ts",
+      "added": 184,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "added": 43,
+      "deleted": 39,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 227,
+  "human_deleted": 41,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
