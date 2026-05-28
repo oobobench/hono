@@ -1,0 +1,50 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "2002660f183e9d7d0c072777769ebd4e1c10b27f",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008850,
+  "message": "fix(serve-static): normalize all backslashes in file paths, not just the first (#4962)",
+  "files_changed": [
+    "package.json",
+    "src/utils/filepath.test.ts",
+    "src/utils/filepath.ts"
+  ],
+  "added": 13,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/filepath.test.ts",
+      "added": 11,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/utils/filepath.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 13,
+  "human_deleted": 2,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
