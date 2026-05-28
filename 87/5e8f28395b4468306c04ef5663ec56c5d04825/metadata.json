@@ -1,0 +1,50 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "875e8f28395b4468306c04ef5663ec56c5d04825",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008659,
+  "message": "fix(request): remove `parseBody` from bodyCache to prevent TypeError (#4807)",
+  "files_changed": [
+    "package.json",
+    "src/request.test.ts",
+    "src/request.ts"
+  ],
+  "added": 45,
+  "deleted": 3,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.test.ts",
+      "added": 42,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/request.ts",
+      "added": 2,
+      "deleted": 2,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 45,
+  "human_deleted": 3,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
