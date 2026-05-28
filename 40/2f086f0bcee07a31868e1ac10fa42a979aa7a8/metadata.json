@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "402f086f0bcee07a31868e1ac10fa42a979aa7a8",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008652,
+  "message": "fix(bearer-auth): escape regex metacharacters in bearer auth prefix option (#4750)",
+  "files_changed": [
+    "src/middleware/bearer-auth/index.test.ts",
+    "src/middleware/bearer-auth/index.ts"
+  ],
+  "added": 78,
+  "deleted": 8,
+  "file_changes": [
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "added": 59,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "added": 19,
+      "deleted": 8,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 78,
+  "human_deleted": 8,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
