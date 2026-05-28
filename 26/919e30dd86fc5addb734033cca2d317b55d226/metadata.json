@@ -1,0 +1,43 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "26919e30dd86fc5addb734033cca2d317b55d226",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008684,
+  "message": "fix(cors): reflect request origin when credentials is true with wildcard (#4813)",
+  "files_changed": [
+    "src/middleware/cors/index.test.ts",
+    "src/middleware/cors/index.ts"
+  ],
+  "added": 76,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "added": 69,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "added": 7,
+      "deleted": 2,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 76,
+  "human_deleted": 2,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
