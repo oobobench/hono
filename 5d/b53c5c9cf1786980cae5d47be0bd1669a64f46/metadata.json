@@ -1,0 +1,36 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "5db53c5c9cf1786980cae5d47be0bd1669a64f46",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780009327,
+  "message": "docs: add CLAUDE.md for AI agent context",
+  "files_changed": [
+    "CLAUDE.md"
+  ],
+  "added": 27,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "CLAUDE.md",
+      "added": 27,
+      "deleted": 0,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 27,
+  "human_deleted": 0,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
