@@ -1,0 +1,103 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "7eb5cb2c02c4a147270edd90beb3d1b24ac0c0b5",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780009965,
+  "message": "feat(jwt): add jwtRefresh middleware for refresh-token rotation",
+  "files_changed": [
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/jwt/jwt.ts"
+  ],
+  "added": 445,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "added": 299,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 4,
+              "end": 4
+            },
+            {
+              "start": 747,
+              "end": 1044
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/index.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 3,
+              "end": 3
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/jwt.ts",
+      "added": 145,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 16,
+              "end": 17
+            },
+            {
+              "start": 162,
+              "end": 304
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 445,
+  "ai_deleted": 2,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "b7335d6c-a232-4c08-ae89-990fa61c00b6"
+  ],
+  "transparency_mode": "on"
+}

@@ -1,0 +1,33 @@
+{
+  "session_id": "b7335d6c-a232-4c08-ae89-990fa61c00b6",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 63,
+  "output_tokens": 29110,
+  "cache_read_tokens": 2410761,
+  "cache_creation_tokens": 110329,
+  "duration_secs": 196,
+  "tool_calls": 29,
+  "files_touched": [
+    "src/middleware/jwt/jwt.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/jwt/index.test.ts"
+  ],
+  "tool_usage": {
+    "ToolSearch": 1,
+    "Read": 11,
+    "Grep": 3,
+    "Bash": 6,
+    "Edit": 5
+  },
+  "bash_commands": [
+    "wc -l src/middleware/jwt/index.test.ts",
+    "cat vitest.config.ts 2>/dev/null || cat vitest.config.mts 2>/dev/null || head -50 package.json",
+    "npx vitest run src/middleware/jwt/index.test.ts --project main 2>&1 | tail -100",
+    "npx tsc --noEmit 2>&1 | tail -30",
+    "git status && git diff --stat",
+    "git log --oneline -5"
+  ],
+  "is_subagent": false,
+  "is_estimated": false
+}
