@@ -1,0 +1,85 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "966a9adad9a3a66b9cb2a679edd1c82a7f48e7ec",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008749,
+  "message": "fix(jsx): normalize SVG attributes on the <svg> root element (#4893)",
+  "files_changed": [
+    "package.json",
+    "src/jsx/base.test.tsx",
+    "src/jsx/base.ts",
+    "src/jsx/index.test.tsx",
+    "src/jsx/utils.test.ts",
+    "src/jsx/utils.ts",
+    "src/middleware/body-limit/index.test.ts",
+    "src/middleware/body-limit/index.ts"
+  ],
+  "added": 298,
+  "deleted": 58,
+  "file_changes": [
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/base.test.tsx",
+      "added": 10,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/base.ts",
+      "added": 10,
+      "deleted": 2,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/index.test.tsx",
+      "added": 59,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.test.ts",
+      "added": 76,
+      "deleted": 12,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/utils.ts",
+      "added": 43,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/body-limit/index.test.ts",
+      "added": 72,
+      "deleted": 0,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/body-limit/index.ts",
+      "added": 27,
+      "deleted": 41,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 298,
+  "human_deleted": 58,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
