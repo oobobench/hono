@@ -1,0 +1,71 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "ef4047bc441d8b844c45ea9ae12921d546a26882",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "automated",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780008690,
+  "message": "fix(jsx/dom): apply select value after children are rendered (#4847)",
+  "files_changed": [
+    "benchmarks/routers-deno/README.md",
+    "benchmarks/routers/README.md",
+    "package.json",
+    "src/jsx/dom/index.test.tsx",
+    "src/jsx/dom/render.ts",
+    "src/router/common.case.test.ts"
+  ],
+  "added": 118,
+  "deleted": 13,
+  "file_changes": [
+    {
+      "path": "benchmarks/routers-deno/README.md",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "benchmarks/routers/README.md",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "package.json",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/index.test.tsx",
+      "added": 91,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/jsx/dom/render.ts",
+      "added": 23,
+      "deleted": 8,
+      "attribution": "human"
+    },
+    {
+      "path": "src/router/common.case.test.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 118,
+  "human_deleted": 13,
+  "ai_percentage": 0.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
