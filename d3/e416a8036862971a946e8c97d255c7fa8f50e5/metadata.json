@@ -1,0 +1,305 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "d3e416a8036862971a946e8c97d255c7fa8f50e5",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780025353,
+  "message": "feat(rate-limit): add rate-limit middleware",
+  "files_changed": [
+    "src/middleware/rate-limit/index.test.ts",
+    "src/middleware/rate-limit/index.ts"
+  ],
+  "added": 225,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "added": 144,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 144
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "added": 81,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 81
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 225,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+    "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+    "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "writer"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "writer"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/types.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t620d84233ec782a4",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "4cc4abd85c373b15ba37a9ea83deda449aba8156"
+    },
+    {
+      "id": "t26d6c0ecc7d93fcf",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "3e0e4464f06b0205745b288543113e5043a9e045"
+    }
+  ]
+}
