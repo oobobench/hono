@@ -1,0 +1,132 @@
+{
+  "events": [
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022067
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022072
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022087
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022092
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "timestamp": 1780022098
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+      "timestamp": 1780023959
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+      "timestamp": 1780023965
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+      "timestamp": 1780023988
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+      "timestamp": 1780023991
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+      "timestamp": 1780023998
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+      "timestamp": 1780025369
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+      "timestamp": 1780025373
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.ts",
+      "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+      "timestamp": 1780025393
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+      "timestamp": 1780025397
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/cors/index.test.ts",
+      "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+      "timestamp": 1780025405
+    }
+  ],
+  "file_interactions": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f"
+        },
+        {
+          "role": "both",
+          "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992"
+        },
+        {
+          "role": "both",
+          "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "2782b7b5-bdee-4a38-bf29-d80db2e09b2f"
+        },
+        {
+          "role": "both",
+          "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992"
+        },
+        {
+          "role": "both",
+          "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178"
+        }
+      ]
+    }
+  ],
+  "longest_session_ms": 66000,
+  "session_count": 3
+}

@@ -1,0 +1,33 @@
+{
+  "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 30,
+  "output_tokens": 9898,
+  "cache_read_tokens": 813282,
+  "cache_creation_tokens": 53446,
+  "duration_secs": 66,
+  "tool_calls": 10,
+  "files_touched": [
+    "src/middleware/cors/index.ts",
+    "src/middleware/cors/index.test.ts"
+  ],
+  "tool_usage": {
+    "Edit": 3,
+    "Glob": 1,
+    "Bash": 4,
+    "Read": 2
+  },
+  "bash_commands": [
+    "npx vitest run src/middleware/cors/index.test.ts 2>&1 | tail -60",
+    "git status && git diff --stat",
+    "git add src/middleware/cors/index.ts src/middleware/cors/index.test.ts && git status",
+    "git commit -m \"$(cat <<'EOF'\nfix(cors): reflect request headers when credentials is true with wildcard allowHeaders\n\nBrowsers reject Access-Control-Allow-Headers: * with credentials, mirroring\nthe sam..."
+  ],
+  "is_subagent": false,
+  "is_estimated": false,
+  "peer_session_ids": [
+    "2782b7b5-bdee-4a38-bf29-d80db2e09b2f",
+    "c57679c8-6e12-4ad3-a64c-277fd7f3d992"
+  ]
+}
