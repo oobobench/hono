@@ -1,0 +1,51 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "d616dbfda2d1992fb68b8c8762db71489866f5d9",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780020587,
+  "message": "auto-commit: hono-01-rate-limit-middleware",
+  "files_changed": [
+    "CLAUDE.md"
+  ],
+  "added": 0,
+  "deleted": 27,
+  "file_changes": [
+    {
+      "path": "CLAUDE.md",
+      "added": 0,
+      "deleted": 27,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 27,
+  "ai_percentage": 0.0,
+  "session_ids": [
+    "a020d6b4-4565-44f3-bbac-745dedb02c92"
+  ],
+  "transparency_mode": "on",
+  "turns": [
+    {
+      "id": "t007e1ce2d4c33483",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "60aca71cb1fd1039326e1b2dd8754d76781470c0"
+    }
+  ]
+}
