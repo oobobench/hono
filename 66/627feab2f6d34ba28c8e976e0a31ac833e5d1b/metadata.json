@@ -1,0 +1,51 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "66627feab2f6d34ba28c8e976e0a31ac833e5d1b",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780021316,
+  "message": "auto-commit: hono-04-compress-brotli",
+  "files_changed": [
+    "CLAUDE.md"
+  ],
+  "added": 0,
+  "deleted": 27,
+  "file_changes": [
+    {
+      "path": "CLAUDE.md",
+      "added": 0,
+      "deleted": 27,
+      "attribution": "human"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 27,
+  "ai_percentage": 0.0,
+  "session_ids": [
+    "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72"
+  ],
+  "transparency_mode": "on",
+  "turns": [
+    {
+      "id": "td60347a5b58e0f1e",
+      "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "56b604794d7521cb8ec127408c98d5481ce7c0ff"
+    }
+  ]
+}
