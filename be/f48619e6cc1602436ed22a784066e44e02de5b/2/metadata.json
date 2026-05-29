@@ -1,0 +1,41 @@
+{
+  "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 71,
+  "output_tokens": 31675,
+  "cache_read_tokens": 2842914,
+  "cache_creation_tokens": 146301,
+  "duration_secs": 195,
+  "tool_calls": 27,
+  "files_touched": [
+    "src/middleware/jwt/jwt.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/jwt/index.test.ts"
+  ],
+  "tool_usage": {
+    "Read": 9,
+    "ToolSearch": 1,
+    "Edit": 5,
+    "mcp__oobo__search": 1,
+    "Bash": 9,
+    "mcp__oobo__recall": 1
+  },
+  "bash_commands": [
+    "cat vitest.config.ts 2>/dev/null || cat vite.config.ts 2>/dev/null || cat vitest.workspace.ts 2>/dev/null",
+    "npx vitest run src/middleware/jwt/index.test.ts --no-coverage 2>&1 | tail -100",
+    "npx tsc --noEmit -p tsconfig.json 2>&1 | tail -40",
+    "npx eslint src/middleware/jwt/ 2>&1 | tail -30",
+    "npx prettier --check src/middleware/jwt/jwt.ts src/middleware/jwt/index.ts src/middleware/jwt/index.test.ts 2>&1 | tail -20",
+    "npx prettier --write src/middleware/jwt/jwt.ts src/middleware/jwt/index.test.ts 2>&1 | tail -10",
+    "npx vitest run src/middleware/jwt/index.test.ts --no-coverage 2>&1 | tail -10",
+    "git status && echo \"---\" && git diff --stat",
+    "git log --oneline -5"
+  ],
+  "is_subagent": false,
+  "is_estimated": false,
+  "peer_session_ids": [
+    "b2367910-6fd3-43db-9a77-f2afbf3da821",
+    "b996d6e3-d864-4f8d-b34b-1a4b21719b98"
+  ]
+}

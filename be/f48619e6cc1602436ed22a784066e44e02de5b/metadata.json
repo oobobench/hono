@@ -1,0 +1,208 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "bef48619e6cc1602436ed22a784066e44e02de5b",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780025628,
+  "message": "feat(jwt): add jwtRefresh middleware for access/refresh token flow",
+  "files_changed": [
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/jwt/jwt.ts"
+  ],
+  "added": 378,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "added": 227,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 4,
+              "end": 4
+            },
+            {
+              "start": 720,
+              "end": 945
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/index.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 3,
+              "end": 3
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/jwt.ts",
+      "added": 150,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 16,
+              "end": 16
+            },
+            {
+              "start": 161,
+              "end": 309
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 378,
+  "ai_deleted": 2,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+    "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+    "b2367910-6fd3-43db-9a77-f2afbf3da821"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "both"
+        },
+        {
+          "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+          "role": "both"
+        },
+        {
+          "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/index.ts",
+      "sessions": [
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "both"
+        },
+        {
+          "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+          "role": "both"
+        },
+        {
+          "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/jwt.ts",
+      "sessions": [
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "both"
+        },
+        {
+          "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+          "role": "both"
+        },
+        {
+          "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/utils/jwt/jwt.ts",
+      "sessions": [
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "reader"
+        },
+        {
+          "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+          "role": "reader"
+        },
+        {
+          "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/utils/jwt/types.ts",
+      "sessions": [
+        {
+          "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+          "role": "reader"
+        },
+        {
+          "session_id": "a82cb9b8-ad2f-4d4b-8862-af3669f90a5e",
+          "role": "reader"
+        },
+        {
+          "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t2f9ad28bbc935f48",
+      "session_id": "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "b22d96353447ae984770fa3816f0cc406d60d6ed"
+    },
+    {
+      "id": "t5239dbaf9298c278",
+      "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "bfc6755ed333689d9ba558f377994466d5b16017"
+    }
+  ]
+}
