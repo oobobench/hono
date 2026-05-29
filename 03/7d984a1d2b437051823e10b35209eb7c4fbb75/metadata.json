@@ -1,0 +1,261 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "037d984a1d2b437051823e10b35209eb7c4fbb75",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780027284,
+  "message": "feat(rate-limit): add middleware with sliding window",
+  "files_changed": [
+    ".oobo/config",
+    "src/middleware/rate-limit/index.test.ts",
+    "src/middleware/rate-limit/index.ts"
+  ],
+  "added": 138,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": ".oobo/config",
+      "added": 4,
+      "deleted": 1,
+      "attribution": "human"
+    },
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "added": 87,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 87
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "added": 47,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 47
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 134,
+  "ai_deleted": 0,
+  "human_added": 4,
+  "human_deleted": 1,
+  "ai_percentage": 96.40287769784173,
+  "session_ids": [
+    "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+    "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+    "8dccc87e-aa8c-4107-86ab-17eff3aeb031"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "writer"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "writer"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+          "role": "reader"
+        },
+        {
+          "session_id": "8dccc87e-aa8c-4107-86ab-17eff3aeb031",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t620d84233ec782a4",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "4cc4abd85c373b15ba37a9ea83deda449aba8156"
+    },
+    {
+      "id": "t1012873fd5d65d1d",
+      "session_id": "b3fe9097-5d28-41fc-808a-d0633b5d45cc",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "b53f5a2f341317c89ebfca7a644a1db842f8ef11"
+    }
+  ]
+}
