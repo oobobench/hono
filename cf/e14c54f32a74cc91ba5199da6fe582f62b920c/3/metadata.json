@@ -1,0 +1,32 @@
+{
+  "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 29,
+  "output_tokens": 9673,
+  "cache_read_tokens": 764835,
+  "cache_creation_tokens": 53120,
+  "duration_secs": 61,
+  "tool_calls": 10,
+  "files_touched": [
+    "src/middleware/cors/index.ts",
+    "src/middleware/cors/index.test.ts"
+  ],
+  "tool_usage": {
+    "Read": 2,
+    "Edit": 3,
+    "Bash": 3,
+    "Glob": 1
+  },
+  "bash_commands": [
+    "npx vitest run src/middleware/cors/index.test.ts 2>&1 | tail -60",
+    "git status && git diff --stat",
+    "git add src/middleware/cors/index.ts src/middleware/cors/index.test.ts && git status"
+  ],
+  "is_subagent": false,
+  "is_estimated": false,
+  "peer_session_ids": [
+    "33415835-ce3a-4ae0-bd33-14b6b8cb3090",
+    "c57679c8-6e12-4ad3-a64c-277fd7f3d992"
+  ]
+}

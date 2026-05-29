@@ -1,0 +1,133 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "cfe14c54f32a74cc91ba5199da6fe582f62b920c",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780024019,
+  "message": "fix(cors): reflect request headers when credentials is true with wildcard allowHeaders",
+  "files_changed": [
+    "src/middleware/cors/index.test.ts",
+    "src/middleware/cors/index.ts"
+  ],
+  "added": 35,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "added": 30,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 95,
+              "end": 103
+            },
+            {
+              "start": 431,
+              "end": 451
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "added": 5,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 139,
+              "end": 143
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 35,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "33415835-ce3a-4ae0-bd33-14b6b8cb3090",
+    "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+    "c69834d7-a34f-44bf-ab28-4829fb54b178"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "33415835-ce3a-4ae0-bd33-14b6b8cb3090",
+          "role": "both"
+        },
+        {
+          "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+          "role": "both"
+        },
+        {
+          "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "sessions": [
+        {
+          "session_id": "33415835-ce3a-4ae0-bd33-14b6b8cb3090",
+          "role": "both"
+        },
+        {
+          "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+          "role": "both"
+        },
+        {
+          "session_id": "c69834d7-a34f-44bf-ab28-4829fb54b178",
+          "role": "both"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t7d81ec7c068de63a",
+      "session_id": "33415835-ce3a-4ae0-bd33-14b6b8cb3090",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "3a091917393ae5e0710b5f4b5defde67889c4e0c"
+    },
+    {
+      "id": "tab6b7020a0cc3a54",
+      "session_id": "c57679c8-6e12-4ad3-a64c-277fd7f3d992",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "47cdffa4ba674bda30e143164b4ab81c8254cd63"
+    }
+  ]
+}
