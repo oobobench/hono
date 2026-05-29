@@ -1,0 +1,301 @@
+{
+  "events": [
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022362
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022362
+    },
+    {
+      "action": "read",
+      "path": "package.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022426
+    },
+    {
+      "action": "read",
+      "path": "src/utils/compress.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022426
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022443
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022449
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022453
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022456
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022458
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022482
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.spec.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022485
+    },
+    {
+      "action": "read",
+      "path": "tsconfig.base.json",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022487
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "timestamp": 1780022511
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024265
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024269
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024430
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024434
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024441
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024446
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024449
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024455
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024465
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024483
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024486
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024494
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024501
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024506
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024513
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024534
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024551
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "timestamp": 1780024555
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025650
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025651
+    },
+    {
+      "action": "read",
+      "path": "src/utils/compress.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025686
+    },
+    {
+      "action": "read",
+      "path": "vitest.config.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025732
+    },
+    {
+      "action": "read",
+      "path": "src/utils/accept.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025868
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025899
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025914
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025926
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025941
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+      "timestamp": 1780025948
+    }
+  ],
+  "file_interactions": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "both",
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70"
+        },
+        {
+          "role": "both",
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "role": "both",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "both",
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70"
+        },
+        {
+          "role": "both",
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff"
+        }
+      ]
+    },
+    {
+      "path": "src/utils/compress.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59"
+        },
+        {
+          "role": "reader",
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70"
+        }
+      ]
+    }
+  ],
+  "longest_session_ms": 392000,
+  "session_count": 3
+}

@@ -1,0 +1,190 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "e16932f6ca8862bb5f8919ae900cf509b694179a",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780025988,
+  "message": "feat(compress): add Brotli (br) encoding support",
+  "files_changed": [
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 191,
+  "deleted": 9,
+  "file_changes": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 133,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 115,
+              "end": 121
+            },
+            {
+              "start": 126,
+              "end": 133
+            },
+            {
+              "start": 330,
+              "end": 330
+            },
+            {
+              "start": 349,
+              "end": 358
+            },
+            {
+              "start": 367,
+              "end": 374
+            },
+            {
+              "start": 460,
+              "end": 540
+            },
+            {
+              "start": 549,
+              "end": 566
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 58,
+      "deleted": 8,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 12,
+              "end": 12
+            },
+            {
+              "start": 24,
+              "end": 54
+            },
+            {
+              "start": 56,
+              "end": 57
+            },
+            {
+              "start": 63,
+              "end": 63
+            },
+            {
+              "start": 82,
+              "end": 82
+            },
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 139,
+              "end": 159
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 191,
+  "ai_deleted": 9,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+    "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+    "c3fdef0a-1374-4159-a0b1-773fc451b9ff"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+          "role": "both"
+        },
+        {
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+          "role": "both"
+        },
+        {
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/utils/compress.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "reader"
+        },
+        {
+          "session_id": "7ca17723-6a33-4b77-9da0-704fd2e82a70",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t4c49f50a39777b30",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "fa5f1b0ff38b5f54bc9137ac92f66d523d7071b3"
+    },
+    {
+      "id": "t16d62de6fac63337",
+      "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "7927997da0c2f4fee1c30de39f3057b1ed3e90a7"
+    }
+  ]
+}
