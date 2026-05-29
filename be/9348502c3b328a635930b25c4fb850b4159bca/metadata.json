@@ -1,0 +1,107 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "be9348502c3b328a635930b25c4fb850b4159bca",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780021308,
+  "message": "feat(compress): add Brotli (br) support",
+  "files_changed": [
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 240,
+  "deleted": 5,
+  "file_changes": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 175,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 115,
+              "end": 120
+            },
+            {
+              "start": 125,
+              "end": 132
+            },
+            {
+              "start": 441,
+              "end": 581
+            },
+            {
+              "start": 590,
+              "end": 609
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 65,
+      "deleted": 5,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 12,
+              "end": 12
+            },
+            {
+              "start": 24,
+              "end": 66
+            },
+            {
+              "start": 95,
+              "end": 95
+            },
+            {
+              "start": 115,
+              "end": 117
+            },
+            {
+              "start": 148,
+              "end": 158
+            },
+            {
+              "start": 166,
+              "end": 171
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 240,
+  "ai_deleted": 5,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72"
+  ],
+  "transparency_mode": "on"
+}
