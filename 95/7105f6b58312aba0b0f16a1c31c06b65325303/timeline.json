@@ -1,0 +1,519 @@
+{
+  "events": [
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020432
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020434
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020437
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020442
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020445
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020449
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020452
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/ip-restriction/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020456
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/timeout/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020459
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/timeout/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020461
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020467
+    },
+    {
+      "action": "read",
+      "path": "src/adapter/aws-lambda/conninfo.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020476
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020490
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020520
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020543
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020555
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "timestamp": 1780020564
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021928
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021931
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021934
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021937
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/ip-restriction/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021940
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021942
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021945
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021948
+    },
+    {
+      "action": "read",
+      "path": "src/types.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021950
+    },
+    {
+      "action": "read",
+      "path": "src/adapter/aws-lambda/conninfo.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021956
+    },
+    {
+      "action": "read",
+      "path": "src/helper/conninfo/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021959
+    },
+    {
+      "action": "read",
+      "path": "src/helper/conninfo/types.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021961
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021976
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780021979
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022005
+    },
+    {
+      "action": "read",
+      "path": "package.json",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022007
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "timestamp": 1780022029
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023834
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/compress/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023836
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023837
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/csrf/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023840
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023840
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/body-limit/index.test.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023843
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/ip-restriction/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023844
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/cache/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023847
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/timeout/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023848
+    },
+    {
+      "action": "read",
+      "path": "src/middleware/timeout/index.test.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023856
+    },
+    {
+      "action": "read",
+      "path": "package.json",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023856
+    },
+    {
+      "action": "read",
+      "path": "src/types.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023860
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023898
+    },
+    {
+      "action": "write",
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+      "timestamp": 1780023922
+    }
+  ],
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/adapter/aws-lambda/conninfo.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.test.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "sessions": [
+        {
+          "role": "writer",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "writer",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "writer",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "sessions": [
+        {
+          "role": "writer",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "both",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        },
+        {
+          "role": "writer",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.test.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92"
+        }
+      ]
+    },
+    {
+      "path": "src/types.ts",
+      "sessions": [
+        {
+          "role": "reader",
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7"
+        },
+        {
+          "role": "reader",
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+        }
+      ]
+    }
+  ],
+  "longest_session_ms": 159000,
+  "session_count": 3
+}

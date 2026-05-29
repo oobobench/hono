@@ -1,0 +1,318 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "957105f6b58312aba0b0f16a1c31c06b65325303",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780023947,
+  "message": "feat(rate-limit): add rate-limit middleware",
+  "files_changed": [
+    "src/middleware/rate-limit/index.test.ts",
+    "src/middleware/rate-limit/index.ts"
+  ],
+  "added": 281,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "added": 183,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 183
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "added": 98,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 98
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 281,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+    "a020d6b4-4565-44f3-bbac-745dedb02c92",
+    "bddb05ff-7ec9-4071-9883-089b5b28c94f"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/adapter/aws-lambda/conninfo.ts",
+      "sessions": [
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/bearer-auth/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/body-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cache/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/ip-restriction/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "writer"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "writer"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "both"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/timeout/index.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/types.ts",
+      "sessions": [
+        {
+          "session_id": "1fe3268f-b0f0-4e83-9ff4-3f4c6183f0c7",
+          "role": "reader"
+        },
+        {
+          "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t007e1ce2d4c33483",
+      "session_id": "a020d6b4-4565-44f3-bbac-745dedb02c92",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "60aca71cb1fd1039326e1b2dd8754d76781470c0"
+    },
+    {
+      "id": "t26d6c0ecc7d93fcf",
+      "session_id": "bddb05ff-7ec9-4071-9883-089b5b28c94f",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "3e0e4464f06b0205745b288543113e5043a9e045"
+    }
+  ]
+}
