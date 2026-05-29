@@ -1,0 +1,55 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "1a95e50fe869a5e443540a6387704d2dfacff3d2",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780020081,
+  "message": "test-session",
+  "files_changed": [
+    "hello.txt"
+  ],
+  "added": 1,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "hello.txt",
+      "added": 1,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 1
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 1,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "a2bfd715-8947-4a62-b9a7-e9fe02706a8d"
+  ],
+  "transparency_mode": "on"
+}

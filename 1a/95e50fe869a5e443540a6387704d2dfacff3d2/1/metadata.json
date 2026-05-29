@@ -1,0 +1,19 @@
+{
+  "session_id": "a2bfd715-8947-4a62-b9a7-e9fe02706a8d",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 13,
+  "output_tokens": 391,
+  "cache_read_tokens": 83386,
+  "cache_creation_tokens": 17061,
+  "duration_secs": 5,
+  "tool_calls": 2,
+  "files_touched": [
+    "hello.txt"
+  ],
+  "tool_usage": {
+    "Write": 1
+  },
+  "is_subagent": false,
+  "is_estimated": false
+}
