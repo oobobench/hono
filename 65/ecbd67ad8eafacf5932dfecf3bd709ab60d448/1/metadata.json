@@ -1,0 +1,26 @@
+{
+  "session_id": "7facef84-bd52-40cf-a61f-843c9f747f68",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 17,
+  "output_tokens": 1646,
+  "cache_read_tokens": 223025,
+  "cache_creation_tokens": 19437,
+  "duration_secs": 19,
+  "tool_calls": 6,
+  "files_touched": [
+    "src/middleware/rate-limit/index.ts"
+  ],
+  "tool_usage": {
+    "Bash": 3,
+    "Write": 1,
+    "Read": 1
+  },
+  "bash_commands": [
+    "ls src/middleware/",
+    "git add src/middleware/rate-limit/index.ts && git status",
+    "git log -3 --oneline"
+  ],
+  "is_subagent": false,
+  "is_estimated": false
+}
