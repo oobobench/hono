@@ -1,0 +1,79 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "abd1d047f5bf33af5b4ea45bdc6ae4dd29591631",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780022116,
+  "message": "fix(cors): reflect request headers when credentials is true with wildcard allowHeaders",
+  "files_changed": [
+    "src/middleware/cors/index.test.ts",
+    "src/middleware/cors/index.ts"
+  ],
+  "added": 38,
+  "deleted": 1,
+  "file_changes": [
+    {
+      "path": "src/middleware/cors/index.test.ts",
+      "added": 32,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 95,
+              "end": 103
+            },
+            {
+              "start": 431,
+              "end": 453
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/cors/index.ts",
+      "added": 6,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 134,
+              "end": 139
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 38,
+  "ai_deleted": 1,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "c57679c8-6e12-4ad3-a64c-277fd7f3d992"
+  ],
+  "transparency_mode": "on"
+}
