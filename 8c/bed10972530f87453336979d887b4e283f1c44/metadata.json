@@ -1,0 +1,36 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "8cbed10972530f87453336979d887b4e283f1c44",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780024656,
+  "message": "auto-commit: hono-04-compress-brotli",
+  "files_changed": [
+    "CLAUDE.md"
+  ],
+  "added": 0,
+  "deleted": 34,
+  "file_changes": [
+    {
+      "path": "CLAUDE.md",
+      "added": 0,
+      "deleted": 34,
+      "attribution": "ai"
+    }
+  ],
+  "ai_added": 0,
+  "ai_deleted": 34,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
