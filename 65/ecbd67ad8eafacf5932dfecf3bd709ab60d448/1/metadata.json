@@ -12,9 +12,9 @@
     "src/middleware/rate-limit/index.ts"
   ],
   "tool_usage": {
-    "Write": 1,
+    "Read": 1,
     "Bash": 4,
-    "Read": 1
+    "Write": 1
   },
   "bash_commands": [
     "ls src/middleware/",
