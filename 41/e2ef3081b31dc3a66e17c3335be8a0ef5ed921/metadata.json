@@ -1,0 +1,199 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "41e2ef3081b31dc3a66e17c3335be8a0ef5ed921",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780024645,
+  "message": "feat(compress): add Brotli (br) encoding support",
+  "files_changed": [
+    "src/middleware/compress/index.test.ts",
+    "src/middleware/compress/index.ts"
+  ],
+  "added": 213,
+  "deleted": 6,
+  "file_changes": [
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "added": 195,
+      "deleted": 2,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 2
+            },
+            {
+              "start": 7,
+              "end": 46
+            },
+            {
+              "start": 157,
+              "end": 162
+            },
+            {
+              "start": 167,
+              "end": 174
+            },
+            {
+              "start": 302,
+              "end": 309
+            },
+            {
+              "start": 356,
+              "end": 484
+            },
+            {
+              "start": 623,
+              "end": 624
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "added": 18,
+      "deleted": 4,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 12,
+              "end": 12
+            },
+            {
+              "start": 16,
+              "end": 24
+            },
+            {
+              "start": 33,
+              "end": 35
+            },
+            {
+              "start": 64,
+              "end": 64
+            },
+            {
+              "start": 84,
+              "end": 86
+            },
+            {
+              "start": 124,
+              "end": 124
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 213,
+  "ai_deleted": 6,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+    "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+    "c3fdef0a-1374-4159-a0b1-773fc451b9ff"
+  ],
+  "transparency_mode": "on",
+  "file_interactions": [
+    {
+      "path": "package.json",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "reader"
+        },
+        {
+          "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+          "role": "reader"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.test.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+          "role": "both"
+        },
+        {
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/compress/index.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "both"
+        },
+        {
+          "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+          "role": "both"
+        },
+        {
+          "session_id": "c3fdef0a-1374-4159-a0b1-773fc451b9ff",
+          "role": "both"
+        }
+      ]
+    },
+    {
+      "path": "src/utils/compress.ts",
+      "sessions": [
+        {
+          "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+          "role": "reader"
+        },
+        {
+          "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+          "role": "reader"
+        }
+      ]
+    }
+  ],
+  "turns": [
+    {
+      "id": "t4c49f50a39777b30",
+      "session_id": "8e5186d9-29fa-44f3-ac2b-c13eab024d59",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "fa5f1b0ff38b5f54bc9137ac92f66d523d7071b3"
+    },
+    {
+      "id": "td60347a5b58e0f1e",
+      "session_id": "53a9c2e5-04c2-4e24-a8d8-c9e77e808e72",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "56b604794d7521cb8ec127408c98d5481ce7c0ff"
+    }
+  ]
+}
