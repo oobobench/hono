@@ -1,0 +1,99 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "d6dc5f6832f497d51f8a30bcc3441ae723bd6373",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780020816,
+  "message": "feat(jwt): add `jwtRefresh` middleware for access/refresh token rotation",
+  "files_changed": [
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/index.ts",
+    "src/middleware/jwt/jwt.ts"
+  ],
+  "added": 387,
+  "deleted": 2,
+  "file_changes": [
+    {
+      "path": "src/middleware/jwt/index.test.ts",
+      "added": 245,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 4,
+              "end": 5
+            },
+            {
+              "start": 748,
+              "end": 990
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/index.ts",
+      "added": 1,
+      "deleted": 1,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 3,
+              "end": 3
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/jwt/jwt.ts",
+      "added": 141,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 175,
+              "end": 315
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 387,
+  "ai_deleted": 2,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "d4fc4cf3-b198-483c-8b24-f2e2b173be56"
+  ],
+  "transparency_mode": "on"
+}
