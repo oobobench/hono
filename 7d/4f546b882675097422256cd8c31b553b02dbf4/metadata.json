@@ -1,0 +1,36 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "7d4f546b882675097422256cd8c31b553b02dbf4",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    }
+  ],
+  "committed_at": 1780027706,
+  "message": "test: verify auto-push",
+  "files_changed": [
+    "hello.txt"
+  ],
+  "added": 1,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "hello.txt",
+      "added": 1,
+      "deleted": 0,
+      "attribution": "ai"
+    }
+  ],
+  "ai_added": 1,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [],
+  "transparency_mode": "on"
+}
