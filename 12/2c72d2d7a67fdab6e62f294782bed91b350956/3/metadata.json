@@ -1,0 +1,36 @@
+{
+  "session_id": "b2367910-6fd3-43db-9a77-f2afbf3da821",
+  "agent": "claude",
+  "link_type": "explicit",
+  "input_tokens": 56,
+  "output_tokens": 46608,
+  "cache_read_tokens": 2603691,
+  "cache_creation_tokens": 131043,
+  "duration_secs": 227,
+  "tool_calls": 22,
+  "files_touched": [
+    "src/middleware/jwt/index.test.ts",
+    "src/middleware/jwt/jwt.ts",
+    "src/middleware/jwt/index.ts"
+  ],
+  "tool_usage": {
+    "Grep": 3,
+    "Read": 7,
+    "Bash": 6,
+    "Edit": 5
+  },
+  "bash_commands": [
+    "npx vitest run src/middleware/jwt/index.test.ts 2>&1 | tail -100",
+    "npx tsc --noEmit 2>&1 | head -30",
+    "npx eslint src/middleware/jwt/jwt.ts src/middleware/jwt/index.ts src/middleware/jwt/index.test.ts 2>&1 | tail -30",
+    "git diff --stat",
+    "git status",
+    "git log -3 --pretty=format:'%h %s'"
+  ],
+  "is_subagent": false,
+  "is_estimated": false,
+  "peer_session_ids": [
+    "b996d6e3-d864-4f8d-b34b-1a4b21719b98",
+    "d4fc4cf3-b198-483c-8b24-f2e2b173be56"
+  ]
+}
