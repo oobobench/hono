@@ -15,7 +15,7 @@
       "role": "agent"
     }
   ],
-  "committed_at": 1780019407,
+  "committed_at": 1780019445,
   "message": "feat(rate-limit): add minimal rate limit middleware",
   "files_changed": [
     "src/middleware/rate-limit/index.ts"
@@ -51,5 +51,14 @@
   "session_ids": [
     "7facef84-bd52-40cf-a61f-843c9f747f68"
   ],
-  "transparency_mode": "on"
+  "transparency_mode": "on",
+  "turns": [
+    {
+      "id": "t7b146539cfd3f66d",
+      "session_id": "7facef84-bd52-40cf-a61f-843c9f747f68",
+      "source": "claude",
+      "turn_index": 0,
+      "tree_hash": "2cb4eaa6350b24561d7650c27bafe36be979d82d"
+    }
+  ]
 }
