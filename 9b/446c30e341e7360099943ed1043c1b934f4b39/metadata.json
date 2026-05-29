@@ -1,0 +1,75 @@
+{
+  "anchor_schema_version": 1,
+  "oobo_version": "1.1.0",
+  "commit_hash": "9b446c30e341e7360099943ed1043c1b934f4b39",
+  "branch": "main",
+  "author": "oobobench <bench@oobo.ai>",
+  "author_type": "agent",
+  "contributors": [
+    {
+      "name": "oobobench <bench@oobo.ai>",
+      "role": "human"
+    },
+    {
+      "name": "claude",
+      "role": "agent"
+    }
+  ],
+  "committed_at": 1780018323,
+  "message": "feat(rate-limit): add rate limit middleware",
+  "files_changed": [
+    "src/middleware/rate-limit/index.test.ts",
+    "src/middleware/rate-limit/index.ts"
+  ],
+  "added": 296,
+  "deleted": 0,
+  "file_changes": [
+    {
+      "path": "src/middleware/rate-limit/index.test.ts",
+      "added": 202,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 202
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    },
+    {
+      "path": "src/middleware/rate-limit/index.ts",
+      "added": 94,
+      "deleted": 0,
+      "attribution": "ai",
+      "agent": "claude",
+      "line_attributions": [
+        {
+          "author": "ai",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 94
+            }
+          ],
+          "agent": "claude"
+        }
+      ]
+    }
+  ],
+  "ai_added": 296,
+  "ai_deleted": 0,
+  "human_added": 0,
+  "human_deleted": 0,
+  "ai_percentage": 100.0,
+  "session_ids": [
+    "56a59cf9-c648-40d7-ab10-5a4d50fad136"
+  ],
+  "transparency_mode": "on"
+}
